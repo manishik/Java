@@ -1,8 +1,10 @@
 package com.java8;
 
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class StreamPrg1 {
 
@@ -11,6 +13,14 @@ public class StreamPrg1 {
         System.out.println("List of Number = " + listOfInts);
         List<Integer> square = (List<Integer>) listOfInts.stream().map(x -> x * x).collect(Collectors.toList());
         System.out.println("List of Squares = " + square);
+
+        List<String> stringList = new LinkedList<String>();
+        stringList.add("Manish");
+        stringList.add("Keshav");
+
+        Stream<String> stream = stringList.stream();
+        System.out.println("Stream = " + stream.count());
+
     }
 
 }

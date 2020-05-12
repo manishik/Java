@@ -8,7 +8,7 @@ interface MyString {
 public class LambdaReverseStr {
 	public static void main(String[] args) {
 		// Block lambda to reverse string
-		MyString reverseStr = (string) -> {
+		MyString myString = (string) -> {
 			String result = "";
 
 			for (int i = string.length() - 1; i >= 0; i--)
@@ -18,6 +18,6 @@ public class LambdaReverseStr {
 		};
 
 		// Output: omeD adbmaL
-		System.out.println(reverseStr.reverseString("Lambda Reverse String Demo"));
+		System.out.println(myString.reverseString("Lambda Reverse String Demo"));
 	}
 }

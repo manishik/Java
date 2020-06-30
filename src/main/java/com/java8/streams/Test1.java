@@ -1,11 +1,11 @@
-package com.java8;
+package com.java8.streams;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Test5 {
+public class Test1 {
 	public static void main(String args[]) {
 		
 		List<Integer> numbersList = Arrays.asList(1, 1, 2, 4, 5, 5, 7, 45, 55, 55, 8, 9, 10, 10);

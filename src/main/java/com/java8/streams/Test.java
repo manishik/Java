@@ -1,11 +1,11 @@
-package com.java8;
+package com.java8.streams;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Stream;
 
-public class Test2 {
+public class Test {
 
 	public static void main(String[] args) {
 

@@ -1,4 +1,4 @@
-package com.java8;
+package com.java8.lambda;
 
 @FunctionalInterface
 interface MyString {

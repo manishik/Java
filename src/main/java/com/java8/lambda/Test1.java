@@ -1,4 +1,4 @@
-package com.java8;
+package com.java8.lambda;
 
 //Java program to demonstrate lambda expressions to implement 
 //a user defined functional interface. 
@@ -8,7 +8,7 @@ interface Square {
 	int calculate(int x);
 }
 
-public class Test3 {
+public class Test1 {
 	public static void main(String args[]) {
 		int a = 5;
 

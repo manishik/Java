@@ -8,7 +8,7 @@ interface Square {
 	int calculate(int x);
 }
 
-public class Test1 {
+public class TestLambda1 {
 	public static void main(String args[]) {
 		int a = 5;
 

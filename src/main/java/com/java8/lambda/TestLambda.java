@@ -3,7 +3,19 @@ package com.java8.lambda;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Test {
+@FunctionalInterface
+interface MyFuncInterface {
+	// An abstract function
+	void abstractFun(int x);
+
+	// A non-abstract (or default) function
+	default void normalFun() {
+		System.out.println("Hello");
+	}
+}
+
+
+public class TestLambda {
 
 	public static void main(String[] args) {
 		MyFuncInterface fobj = (int ii) -> System.out.println(2 * ii);
@@ -14,9 +26,7 @@ public class Test {
 		System.out.println();
 
 		HashMap<String, String> hashMap = new HashMap<String, String>();
-		hashMap.put("Hey", "1");
-		hashMap.put("Hey", "Manish");
-		hashMap.put("1", "Keshav");
+		hashMap.put("Hey", "1"); hashMap.put("Hey", "Manish"); hashMap.put("1", "Keshav");
 
 		hashMap.forEach((k, v) -> System.out.println(k + " " + v));
 
@@ -50,17 +60,6 @@ public class Test {
 
 	}
 
-}
-
-@FunctionalInterface
-interface MyFuncInterface {
-	// An abstract function
-	void abstractFun(int x);
-
-	// A non-abstract (or default) function
-	default void normalFun() {
-		System.out.println("Hello");
-	}
 }
 
 /*

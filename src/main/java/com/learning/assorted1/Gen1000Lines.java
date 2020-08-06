@@ -9,9 +9,9 @@ public class Gen1000Lines {
     public static void main(String[] args) {
 
         try {
-            File file = new File("file1.txt");
+            File file = new File("file.txt");
             FileWriter fw = new FileWriter(file);
-            for (int i = 1; i < 10000; i++) {
+            for (int i = 1; i < 1000000; i++) {
                 file.createNewFile();
                 fw.write("This is line number " + i + '\n');
             }

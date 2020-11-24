@@ -7,7 +7,7 @@ public class IfCheck {
 		if (false) {
 			System.out.println("True");
 		} else {
-			System.out.println("Hey");
+			System.out.println("false");
 		} 
 		
 		

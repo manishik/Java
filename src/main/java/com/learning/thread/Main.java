@@ -39,7 +39,7 @@ class MyThread implements Runnable {
 public class Main {
 	public static void main(String args[]) throws Exception {
 		MyResource sObj = new MyResource();
-		new MyThread("MyThread", sObj);
+		new MyThread("ManishThread", sObj);
 		for (int i = 0; i < 10; i++) {
 			Thread.sleep(200);
 			System.out.print(".");

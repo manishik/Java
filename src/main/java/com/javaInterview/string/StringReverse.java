@@ -21,6 +21,8 @@ public class StringReverse {
 	static String reversing(String string) {
 		System.out.println("String = " + string);
 		StringBuffer stringBuffer = new StringBuffer(string);
+		StringBuilder stringBuilder = new StringBuilder(string);
+		System.out.println("Reverse using StringBuilder = " + stringBuilder.reverse().toString());
 		return stringBuffer.reverse().toString();
 	}
 }

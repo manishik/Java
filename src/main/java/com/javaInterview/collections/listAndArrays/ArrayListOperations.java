@@ -23,8 +23,9 @@ public class ArrayListOperations {
 		
 		//Converting Array to List using functions
 		List<String> list2 = new ArrayList<String>();
+		Arrays.sort(coins);
 		list2 = Arrays.asList(coins);
-		System.out.println("List 2 = "+list2);
+		System.out.println("Sorted List 2 = "+list2);
 		//Unable to add after conversion (using Arrays.asList)
 		//list2.add(1, "Z2"); //adds to the specified position
 		//System.out.println("List 2 after adding = "+list2);

@@ -5,18 +5,18 @@ import java.util.ArrayList;
 public class Division {
 
 	public static void main(String[] args) {
-		int number = 1234678999;
+		int number = 1234678907;
 		int sumTotal = 0;
 
 		System.out.println("Number = " + number);
 		// Converting int number to ArrayList
 		ArrayList<Integer> arrayList = new ArrayList<Integer>();
 		do {
-			System.out.println("Remainder = " + number % 10);
+			//System.out.println("Remainder = " + number % 10);
 			arrayList.add(number % 10); // % gets the remainder
 			sumTotal = sumTotal + (number % 10);
 			number = number / 10; // / gets the quotient
-			System.out.println("Quotient = " + number);
+			//System.out.println("Quotient = " + number);
 		} while (number > 0);
 
 		System.out.println("arrayList = " + arrayList);

@@ -13,7 +13,7 @@ public class FinalArrayList {
 		list.add("Manish");
 		list.add("Indudhar");
 		list.add("Keshav");
-		list.add("SomeName");
+		list.add("Nandini");
 		list.add("Manish"); //adding duplicates
 		
 		System.out.println("List = "+list);

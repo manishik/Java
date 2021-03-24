@@ -18,11 +18,15 @@ public class OddEvenStream {
         //System.out.println("Fib Stream = " + integerFibStream.collect(Collectors.toList()));
         //integerFibStream.forEach(System.out::println);
 
+        //Converting List to Stream
         List<Integer> evenNumberList = numbersList.stream().filter(x -> x % 2 == 0).collect(Collectors.toList());
+
+        List<Integer> evenNumberSquareList = numbersList.stream().filter(x -> x % 2 == 0).map(x -> x * x).collect(Collectors.toList());
 
         List<Integer> oddFibNumberList = integerFibStream.filter(i -> i % 2 != 0).collect(Collectors.toList());
 
         System.out.println("Even Number List = " + evenNumberList);
+        System.out.println("Even Number Squared List = " + evenNumberSquareList);
         Collections.reverse(evenNumberList);
         System.out.println("Even Number List Reversed = " + evenNumberList);
         System.out.println("Odd Fibonacci Number List = " + oddFibNumberList);

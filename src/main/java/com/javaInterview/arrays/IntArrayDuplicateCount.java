@@ -30,6 +30,7 @@ public class IntArrayDuplicateCount {
         int dupCount = 0;
         int numberOfDup = 0;
 
+        System.out.println("Previous = " + previous);
         System.out.println("Duplicates are : ");
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] == previous) {

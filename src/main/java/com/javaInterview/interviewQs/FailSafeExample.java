@@ -4,26 +4,30 @@ import java.util.Iterator;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class FailSafeExample {
-	public static void main(String[] args) {
-		ConcurrentHashMap<String, String> premiumPhone = new ConcurrentHashMap<String, String>();
-		premiumPhone.put("Apple", "iPhone 7 Plus");
-		premiumPhone.put("HTC", "HTC One");
-		premiumPhone.put("Samsung", "S7");
+    public static void main(String[] args) {
+        ConcurrentHashMap<String, String> premiumPhone = new ConcurrentHashMap<String, String>();
+        premiumPhone.put("Apple", "iPhones");
+        premiumPhone.put("Samsung", "Galaxy-S-Series");
+        premiumPhone.put("HTC", "HTC-Series");
 
-		Iterator iterator = premiumPhone.keySet().iterator();
+        System.out.println("Initial Cell Phone List = " + premiumPhone);
 
-		//adding new object while iterating a collection 
-		while (iterator.hasNext()) {
-			System.out.println(premiumPhone.get(iterator.next()));
-			premiumPhone.put("Sony", "Xperia Z");
-		}
-		
-		Iterator iterator2 = premiumPhone.keySet().iterator();
-		System.out.println("PremiumPhones : ");
-		while (iterator2.hasNext()) {
-			System.out.print(premiumPhone.get(iterator2.next()) + "\t");
-		}
-	}
+        Iterator iterator = premiumPhone.keySet().iterator();
+
+        //Adding new object while iterating a collection
+        while (iterator.hasNext()) {
+            System.out.println(premiumPhone.get(iterator.next()));
+            premiumPhone.put("Sony", "Xperia-Series");
+        }
+
+        Iterator iterator2 = premiumPhone.keySet().iterator();
+        System.out.print("New Cell Phone List : ");
+        while (iterator2.hasNext()) {
+            System.out.print(premiumPhone.get(iterator2.next()) + "\t");
+        }
+		System.out.println();
+		System.out.println("Cell Phone List = " + premiumPhone);
+    }
 }
 
 

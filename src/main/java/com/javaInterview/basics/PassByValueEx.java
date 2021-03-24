@@ -4,20 +4,23 @@ public class PassByValueEx {
 
     public static void main(String[] args) {
         Dog dog = new Dog();
-        dog.setName("Max");
-        dog.setTailLen("Short Tail");
-        Change change = new Change();
-        change.foo(dog);
+        dog.setName("Suzie");
+        dog.setTailLen("Thick Tail");
+        ClassThatChanges classThatChanges = new ClassThatChanges();
+        Dog dog1 = classThatChanges.foo(dog);
+        System.out.println("Returned Dog = " + dog1.getName() + "\t" + dog1.getTailLen());
         System.out.println(dog.getName() + "\t" + dog.getTailLen());
     }
 }
 
-class Change {
-    public void foo(Dog someDog) {
-        someDog.setName("Bubble"); // AAA
-        someDog.setTailLen("Long Tail");
-        someDog = new Dog(); // BBB
-        someDog.setName("Rowlf"); // CCC
+class ClassThatChanges {
+    public Dog foo(Dog dog) {
+        dog.setName("Bubble"); // AAA
+        dog.setTailLen("Long Tail");
+        dog = new Dog(); // BBB
+        dog.setName("Max"); // CCC
+        dog.setTailLen("Short Tail");
+        return dog;
     }
 }
 

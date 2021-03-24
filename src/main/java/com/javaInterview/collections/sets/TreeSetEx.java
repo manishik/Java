@@ -13,10 +13,10 @@ class TreeSetEx {
 
 		System.out.println("TreeSet = "+treeSet);
 		
-		System.out.println(Collections.min(treeSet));
-		System.out.println(Collections.min(treeSet, String.CASE_INSENSITIVE_ORDER));
-		System.out.println(Collections.max(treeSet));
-		System.out.println(Collections.max(treeSet, String.CASE_INSENSITIVE_ORDER));
+		System.out.println("Min = " + Collections.min(treeSet));
+		System.out.println("Min Case Insensitive = " + Collections.min(treeSet, String.CASE_INSENSITIVE_ORDER));
+		System.out.println("Max = " + Collections.max(treeSet));
+		System.out.println("Max Case Insensitive = " + Collections.max(treeSet, String.CASE_INSENSITIVE_ORDER));
 		
 		TreeSet treeSet2 = new TreeSet();
 		treeSet2.add("Samarth");

@@ -1,12 +1,17 @@
 package com.javaInterview.sort_search;
 
+import java.util.Arrays;
+
 public class BinarySearch {
 
 	public static void main(String[] args) {
 
 		int array[] = {55, 44, 91, 12, 789, 480, 921, 6644, 889};
 
-		System.out.println("Given Array = ");
+		//Remember to print an int array without iterating
+		System.out.println("Given Array = " + Arrays.toString(array));
+
+		System.out.print("Given Array = ");
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(" " + array[i]);
 		}

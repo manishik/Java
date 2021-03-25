@@ -48,8 +48,8 @@ public class StringConversion {
 		// converts String array to List
 		String[] sa = { "one", "two", "three", "four" };
 		List<String> sList = Arrays.asList(sa); // make a List
-		System.out.println("size " + sList.size());
-		System.out.println("idx2 " + sList.get(2));
+		System.out.println("Size = " + sList.size());
+		System.out.println("Index 2 = " + sList.get(2));
 		
 		//Get contents of List using Iterators
 		Iterator<String> it = sList.iterator();
@@ -58,6 +58,11 @@ public class StringConversion {
 			String s4 = (String)it.next();
 			System.out.println(s4);
 		}
+
+		String string1 = "Manish Keshav";
+		char[] charArray = string1.toCharArray();
+		System.out.println("charArray = " + Arrays.toString(charArray));
+
 	}
 
 }

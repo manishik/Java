@@ -49,7 +49,6 @@ public class HashMapIter {
 		}
 
 		System.out.println();
-
 		String str = hashMap.get("Manish");
 		//System.out.println("Manish = " + str);
 
@@ -63,6 +62,10 @@ public class HashMapIter {
 		}
 
 		System.out.println();
+
+		//Using Lambda functions
+		System.out.println("Using Lambda Functions..");
+		hashMap.forEach((k, v) -> System.out.println(k + " " + v));
 		
 		// Using Generics
 		Map<Integer, Integer> map = new HashMap<Integer, Integer>();

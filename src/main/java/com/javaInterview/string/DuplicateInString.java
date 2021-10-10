@@ -7,7 +7,7 @@ public class DuplicateInString {
 
     public static void main(String[] args) {
 
-        String string = "Apple";
+        String string = "Apppple";
 
         char[] charArray = string.toCharArray();
         Map<Character, Integer> characterHashMap = new HashMap<Character, Integer>();
@@ -18,6 +18,7 @@ public class DuplicateInString {
             if (characterHashMap.containsKey(c)) {
                 // If char is present in charCountMap,
                 // incrementing it's count by 1
+                //System.out.println(characterHashMap.get(c));
                 characterHashMap.put(c, characterHashMap.get(c) + 1);
             } else {
                 // If char is not present in charCountMap,

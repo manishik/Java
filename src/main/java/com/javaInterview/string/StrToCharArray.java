@@ -4,17 +4,17 @@ public class StrToCharArray {
 
 	public static void main(String[] args) {
 
-		String str = "Test String";
+		String string = "Test String";
 
-		System.out.println("String  = " + str);
+		System.out.println("String  = " + string);
 
-		char charArray[] = new char[str.length()];
-		for (int i = 0; i < str.length(); i++) {
-			charArray[i] = str.charAt(i);
+		char charArray[] = new char[string.length()];
+		for (int i = 0; i < string.length(); i++) {
+			charArray[i] = string.charAt(i);
 			System.out.println(charArray[i]);
 		}
 
-		System.out.println("Array = ");
+		System.out.print("Array = ");
 		//Print the Character Array  
 		for (int j = 0; j < charArray.length; j++) {
 			System.out.print(charArray[j]);
@@ -22,8 +22,8 @@ public class StrToCharArray {
 
 		System.out.println();
 		
-		char aCharArray[] = str.toCharArray();
-		System.out.println("Array = ");
+		char aCharArray[] = string.toCharArray();
+		System.out.print("Array = ");
 		System.out.println(aCharArray);
 		System.out.println("Array Length = " + aCharArray.length);
 	}

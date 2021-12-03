@@ -1,5 +1,6 @@
 package com.learning.dateAndtime;
 
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -43,6 +44,9 @@ public class NewDateTime {
         System.out.println("Date (Singapore) from given random date : " + asiaZonedDateTime);
         System.out.println("Date (New York) : " + asiaZonedDateTime.withZoneSameInstant(zoneIdEST));
         System.out.println("Date (Singapore) from currentLocalDateTime: " + currentLocalDateTime.atZone(zoneIdEST).withZoneSameInstant(singaporeZoneId));
+
+        Instant instant = Instant.now();
+        System.out.println("instant = " + instant);
 
     }
 }

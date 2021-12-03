@@ -4,7 +4,7 @@ public class RevWords {
 
     public static void main(String[] args) {
 
-        String string = "Manish Indudhar";
+        String string = "Manish Indudhar is an Java Developer";
 
         String[] stringArray = string.split(" ");
 

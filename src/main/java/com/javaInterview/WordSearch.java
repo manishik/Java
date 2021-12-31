@@ -1,6 +1,9 @@
 package com.javaInterview;
 
-import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.Map;
+import java.util.Set;
 
 /*
     Interview with Charter on 2nd Dec 2021 for Denver CO location
@@ -9,13 +12,18 @@ import java.util.HashSet;
 public class WordSearch {
 
     String[] everyWord = new String[100];
-    HashSet<String[]> hashSet = new HashSet();
+    Map<String,String> stringLinkedHashMap = new LinkedHashMap<String,String>();
+    Set<String> stringSet = new LinkedHashSet<>();
 
     public void initialSetup(String text) {
         // Setup your data structures here
         // Do as much work here to optimize the calls on findNextWord()
         everyWord = text.split(" ");
-        hashSet.add(text.split(" "));
+        for(String word: everyWord){
+            stringLinkedHashMap.put(word, word);
+            stringSet.add(word);
+        }
+
     }
 
     public String findNextWord(String word) {
@@ -24,24 +32,20 @@ public class WordSearch {
         // "foo" -> null
         String nextWord = new String();
 
-        //System.out.println(everyWord.length);
+        System.out.println("stringLinkedHashMap = " + stringLinkedHashMap);
+        System.out.println("stringSet = " + stringSet);
+
+        if(stringLinkedHashMap.containsKey(word)) {
+            stringLinkedHashMap.get(word);
+        }
+
+
         for (int i = 0; i < everyWord.length; i++) {
-            System.out.println("Inside");
-            System.out.println("everyWord = " + everyWord[i]);
             if (everyWord[i].equalsIgnoreCase(word)) {
-                //System.out.println("Word Found");
                 nextWord = everyWord[i + 1];
-                //System.out.println("nexWord = " + nextWord);
                 return nextWord;
             }
         }
-
-        System.out.println("HashSet = " + hashSet);
-
-        if (hashSet.contains(word)) {
-
-        }
-        //System.out.println("Word Not Found");
         return null;
     }
 

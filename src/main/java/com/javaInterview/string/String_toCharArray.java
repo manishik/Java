@@ -1,6 +1,6 @@
 package com.javaInterview.string;
 
-public class StrToCharArray {
+public class String_toCharArray {
 
 	public static void main(String[] args) {
 
@@ -9,10 +9,10 @@ public class StrToCharArray {
 		System.out.println("String  = " + string);
 
 		char charArray[] = new char[string.length()];
-		for (int i = 0; i < string.length(); i++) {
+		/*for (int i = 0; i < string.length(); i++) {
 			charArray[i] = string.charAt(i);
-			System.out.println(charArray[i]);
-		}
+			//System.out.println(charArray[i]);
+		}*/
 
 		System.out.print("Array = ");
 		//Print the Character Array  

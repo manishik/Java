@@ -21,7 +21,5 @@ public class AddBigIntegersAndDecimals {
 		BigDecimal bigDecimal1 = scan.nextBigDecimal();
 		BigDecimal sumBigDecimal = bigDecimal.add(bigDecimal1);
 		System.out.println("Sum of 2 given BigDecimals is = " + sumBigDecimal);
-
 	}
-
 }

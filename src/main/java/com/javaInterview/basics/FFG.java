@@ -36,7 +36,7 @@ public class FFG {
                     System.exit(0);
                 } else {
                     System.out.println("Factorial of the given number = "
-                            + ffgObj.fact(n1));
+                            + ffgObj.factorialUsingLoop(n1));
                 }
                 break;
             case 2:
@@ -57,11 +57,24 @@ public class FFG {
     }
 
 	// (Using recursion) - Recursion is when a statement in a function calls itself repeatedly.
-    long fact(long n) {
-        if (n == 0)
+    long fact(long number) {
+        if (number == 0)
             return (1);
         else
-            return (n * fact(n - 1));
+            return (number * fact(number - 1));
+    }
+
+    // (Using loop)
+    long factorialUsingLoop(long number) {
+        long fact = 1;
+        if (number == 0)
+            return (1);
+        else {
+            for (long i = 1; i <= number; i++) {
+                fact = fact * i;
+            }
+            return fact;
+        }
     }
 
     long fibo(long n) {

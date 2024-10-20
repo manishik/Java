@@ -23,7 +23,7 @@ public class OracleJDBC {
 		Connection connection = null;
 
 		try {
-			connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "Manish", "manish");
+			connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/XEPDB1", "Manish", "manish1");
 		} catch (SQLException e) {
 			System.out.println("Connection Failed! Check output console");
 			e.printStackTrace();

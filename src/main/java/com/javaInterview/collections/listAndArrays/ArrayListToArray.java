@@ -11,7 +11,7 @@ class ArrayListToArray {
 		arrayList.add(5); arrayList.add(6); arrayList.add(9); 
 		arrayList.add(8); arrayList.add(1); arrayList.add(99); arrayList.add(50);
 
-		System.out.println("ArrayList " + arrayList);
+		System.out.println("ArrayList = " + arrayList);
 
 		Integer ia[] = new Integer[arrayList.size()];
 		ia = arrayList.toArray(ia); //Converting ArrayList to Array.

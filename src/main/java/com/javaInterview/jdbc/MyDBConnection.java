@@ -44,7 +44,7 @@ public class MyDBConnection {
 			
 			//OPEN A CONNECTION to a database (Specifying a Database URL, User Name, and Password)
 			//Select your driver type : thin, oci, kprb...
-			connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:11521/XEPDB1", "Manish", "manish1");
+			connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/XEPDB1", "Manish", "manish1");
 			
 			//CREATE a STATEMENT Object
 			statement = connection.createStatement();

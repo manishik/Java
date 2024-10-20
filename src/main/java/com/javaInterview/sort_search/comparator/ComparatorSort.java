@@ -38,10 +38,10 @@ public class ComparatorSort {
 		System.out.println("Family Name List = " + familyList);
 		// Collections sorting
 		// Using a different classes
-		// Collections.sort(familyList, new NameSort());
+		 Collections.sort(familyList, new NameSort());
 		// Collections.sort(familyList, new AgeSort());
 
-		Collections.sort(familyList);
+		//Collections.sort(familyList);
 
 		// Sort by FamilyName directly 
 		/*Collections.sort(familyList, new Comparator<Family>() {

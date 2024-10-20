@@ -11,10 +11,10 @@ public class NameSort implements Comparator<Family> {
 
 		// compare can internally use compareTo method
 		// Ascending Order
-		// return familyName1.compareTo(familyName2);
+		 return familyName1.compareTo(familyName2);
 
 		// Descending Order
-		return familyName2.compareTo(familyName1);
+		//return familyName2.compareTo(familyName1);
 	}
 
 }

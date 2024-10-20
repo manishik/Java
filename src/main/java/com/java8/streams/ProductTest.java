@@ -1,6 +1,7 @@
 package com.java8.streams;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -29,15 +30,19 @@ public class ProductTest {
         Long l1 = productList.stream().filter((x) -> x.getProductPrice() > 500).count();
         System.out.println(l1);
 
-        List<Product> resultProductList = productList.stream().filter((x) -> x.getProductPrice() > 500).collect(Collectors.toList());
-        System.out.println(resultProductList);
+        List<Product> productList1 = Arrays.asList(new Product("A", 100),
+                new Product("B", 200),
+                new Product("C", 300));
+
+        List<Product> resultProductList = productList.stream().filter((x) -> x.getProductPrice() > 2000).collect(Collectors.toList());
+        System.out.println("resultProductList = " +resultProductList);
 
 
         Stream<Product> productStream = Stream.of(new Product("A", 100),
                 new Product("B", 200),
                 new Product("C", 300));
 
-        List<Product> pList = productStream
+        List<Product> pList = productList1.stream()
                 .filter(e -> e.getProductPrice() < 200)
                 .collect(Collectors.toList());
 

@@ -6,7 +6,7 @@ public class ArrayEx {
 
     public static void main(String[] args) {
         String[] array = new String[] {"John", "Mary", "Bob"};
-        System.out.println(Arrays.toString(array));
+        System.out.println("array = " + Arrays.toString(array));
 
         String[][] deepArray = new String[][] {{"John", "Mary"}, {"Alice", "Bob"}};
         System.out.println(Arrays.toString(deepArray));

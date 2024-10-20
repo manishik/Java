@@ -32,6 +32,10 @@ public class FailSafeExample {
 
 
 /*
+
+Fail-safe iterators means they will not throw any exception even if the collection is modified while iterating over it.
+Whereas Fail-fast iterators throw an exception(ConcurrentModificationException) if the collection is modified while iterating over it.
+
 										Fail Fast Iterator  		Fail Safe Iterator
 
 Throw ConcurrentModification Exception 	Yes 						No 

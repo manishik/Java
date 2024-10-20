@@ -22,7 +22,7 @@ public class HashMapIter {
 		System.out.println("HashMap = " + hashMap);
 		String val = "";
 		for (Map.Entry<String, String> map : hashMap.entrySet()) {
-			System.out.println("Key: " + map.getKey() + " Value: " + map.getValue());
+			System.out.println("Key: " + map.getKey() + "  <--> Value: " + map.getValue());
 
 			if (map.getKey() == "AB") {
 				val = map.getValue();
@@ -38,7 +38,7 @@ public class HashMapIter {
 		System.out.println();
 
 		for (String key : hashMap.keySet()) {
-			System.out.println("Key: " + key + ", Value: " + hashMap.get(key));
+			System.out.println("Key: " + key + " <--> Value: " + hashMap.get(key));
 		}
 		
 		System.out.println();
@@ -65,7 +65,7 @@ public class HashMapIter {
 
 		//Using Lambda functions
 		System.out.println("Using Lambda Functions..");
-		hashMap.forEach((k, v) -> System.out.println(k + " " + v));
+		hashMap.forEach((key, value) -> System.out.println(key + " " + value));
 		
 		// Using Generics
 		Map<Integer, Integer> map = new HashMap<Integer, Integer>();

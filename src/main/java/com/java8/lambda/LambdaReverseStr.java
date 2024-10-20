@@ -26,7 +26,7 @@ public class LambdaReverseStr {
             return result;
         };
 
-        // Output: omeD adbmaL
+        // Output:
         System.out.println(myString.reverseString("Lambda Reverse String Demo"));
     }
 }

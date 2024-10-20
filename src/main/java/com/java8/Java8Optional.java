@@ -28,6 +28,7 @@ public class Java8Optional {
 
         if (Optional.of(strFName).isPresent()) {
             System.out.println("Value available.");
+
         } else {
             System.out.println("Value not available.");
         }

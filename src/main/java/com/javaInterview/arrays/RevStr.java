@@ -9,7 +9,7 @@ public class RevStr {
 		String string = "Manish Keshav";
 
 		//Convert string to character array & print character array using steams/lambda expression
-		char charArray[] = new char[string.length()];
+		char charArray[];
 		charArray= string.toCharArray();
 		Stream.of(charArray).map(String::valueOf).forEach(System.out::println);
 

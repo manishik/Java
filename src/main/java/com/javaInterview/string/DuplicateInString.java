@@ -11,7 +11,7 @@ public class DuplicateInString {
 
         char[] charArray = string.toCharArray();
         Map<Character, Integer> characterHashMap = new HashMap<Character, Integer>();
-        int count = 0;
+        //int count = 0;
 
         // checking each char of strArray
         for (char c : charArray) {

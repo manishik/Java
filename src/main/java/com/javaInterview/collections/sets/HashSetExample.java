@@ -49,5 +49,14 @@ public class HashSetExample {
 		while (iter.hasNext()) {
 			System.out.print(" "+iter.next());
 		}
+
+		System.out.println();
+		System.out.println("Iterating the same Set using forEach ");
+		hashSet.forEach(item -> System.out.print(item + " "));
+
+		System.out.println();
+		System.out.println("Iterating the same Set using streams ");
+		hashSet.stream().forEach(System.out::print);
+
 	}
 }

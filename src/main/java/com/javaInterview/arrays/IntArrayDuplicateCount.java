@@ -5,15 +5,15 @@ import java.util.Arrays;
 public class IntArrayDuplicateCount {
 
     public static void main(String[] args) {
-        int aArray[] = new int[] { 4, -1, -2, 4, 3, 5, 0, -1, 0 };
-        int[] intArray = { 7, 2, 6, 1, 4, 7, 4, 5, 4, 7, 7, 3, 1 };
-        duplicate(aArray);
+        int intArray[] = new int[]{4, -1, -2, 4, 3, 5, 0, -1, 0};
+        int[] intArray1 = {7, 2, 6, 1, 4, 7, 4, 5, 4, 7, 7, 3, 1};
+        duplicate(intArray);
     }
 
     public static void duplicate(int numbers[]) {
 
         System.out.println("Array : ");
-        for(int i:numbers){
+        for (int i : numbers) {
             System.out.print(" " + i);
         }
 
@@ -21,7 +21,7 @@ public class IntArrayDuplicateCount {
         Arrays.sort(numbers); //Sort the Array
 
         System.out.println("Sorted Array : ");
-        for(int i:numbers){
+        for (int i : numbers) {
             System.out.print(" " + i);
         }
 
@@ -39,13 +39,11 @@ public class IntArrayDuplicateCount {
                     dupCount++;
                     if (dupCount == 1) {
                         System.out.print(numbers[i]);
-                    }
-                    else {
+                    } else {
                         System.out.print(", " + numbers[i]);
                     }
                 }
-            }
-            else {
+            } else {
                 previous = numbers[i];
                 numberOfDup = 0;
             }

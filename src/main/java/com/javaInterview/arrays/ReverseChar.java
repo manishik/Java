@@ -34,7 +34,7 @@ public class ReverseChar {
 		}
 		
 		System.out.println();
-		String string = "Manish Indudhar";
+		String string = "This string has Spaces, Numb3r5 & c0up13 0f Speci@l (har@cter$";
 		System.out.println("String = " + string);
 		StringBuffer stringBuffer = new StringBuffer(string);
 		stringBuffer.reverse();

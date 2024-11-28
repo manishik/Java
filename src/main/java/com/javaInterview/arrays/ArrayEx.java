@@ -5,8 +5,10 @@ import java.util.Arrays;
 public class ArrayEx {
 
     public static void main(String[] args) {
-        String[] array = new String[] {"John", "Mary", "Bob"};
-        System.out.println("array = " + Arrays.toString(array));
+        String[] strArray = new String[] {"John", "Mary", "Bob"};
+        System.out.println("strArray = " + Arrays.toString(strArray));
+        String newString = Arrays.toString(strArray);
+        System.out.println("newString = " + newString);
 
         String[][] deepArray = new String[][] {{"John", "Mary"}, {"Alice", "Bob"}};
         System.out.println(Arrays.toString(deepArray));

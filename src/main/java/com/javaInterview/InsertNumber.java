@@ -4,8 +4,8 @@ public class InsertNumber {
 
     public static void main(String[] args) {
         InsertNumber test = new InsertNumber();
-        int result = test.Solution(67454);
-        //System.out.println(result);
+        int result = test.Solution(6748954);
+        System.out.println("Reverse  = " + result);
     }
 
     public int Solution(int N){

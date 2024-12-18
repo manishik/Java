@@ -22,7 +22,7 @@ public class String_toCharArray {
 
 		System.out.println();
 		
-		char aCharArray[] = string.toCharArray();
+		char[] aCharArray = string.toCharArray();
 		System.out.print("Array = ");
 		System.out.println(aCharArray);
 		System.out.println("Array Length = " + aCharArray.length);

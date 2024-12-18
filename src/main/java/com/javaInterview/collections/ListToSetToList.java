@@ -1,10 +1,6 @@
 package com.javaInterview.collections;
 
-import java.util.ArrayList;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class ListToSetToList {
 	public static void main(String[] args) {
@@ -15,6 +11,8 @@ public class ListToSetToList {
 		myArrayList.add("D"); myArrayList.add("D"); myArrayList.add("2");
 
 		System.out.println(myArrayList + " (ArrayList)");
+
+		List<String> list = Arrays.asList("A", "B", "Manish", "1", "*");
 
 		Set<String> myLinkedHashSet = new LinkedHashSet<String>(myArrayList); // List to Set (LinkedHashSet)
 		// LinkedHashSet maintains insertion order

@@ -5,12 +5,12 @@ import java.util.Arrays;
 public class IntArrayDuplicateCount {
 
     public static void main(String[] args) {
-        int intArray[] = new int[]{4, -1, -2, 4, 3, 5, 0, -1, 0};
+        int[] intArray = new int[]{4, -1, -2, 4, 3, 5, 0, -1, 0};
         int[] intArray1 = {7, 2, 6, 1, 4, 7, 4, 5, 4, 7, 7, 3, 1};
         duplicate(intArray);
     }
 
-    public static void duplicate(int numbers[]) {
+    public static void duplicate(int[] numbers) {
 
         System.out.println("Array : ");
         for (int i : numbers) {

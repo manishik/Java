@@ -1,7 +1,9 @@
 #idea
 *.iml
+*.class
 /.idea
 /target
+/out
 
 
 /.settings

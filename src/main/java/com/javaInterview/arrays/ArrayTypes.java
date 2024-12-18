@@ -6,7 +6,7 @@ public class ArrayTypes {
 
         String[] stringArray = new String[] {"John", "Mary", "Bob"};
 
-        int intArray[] = new int[] { 1, 5, -3, 11, 2, 6, 1, 10 };
+        int[] intArray = new int[] { 1, 5, -3, 11, 2, 6, 1, 10 };
 
         Integer[] integerArray = new Integer[] { 1, 2, 3, 9, 9, 8, 7 };
 

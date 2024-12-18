@@ -19,6 +19,9 @@ public class ListToArray {
 
 		String[] sl = (String[]) list.toArray(new String[0]);
 		System.out.println("Array of String has length " + sl.length);
+		for (String s : sl){
+			System.out.println(s);
+		}
 
 		List<String> ll1 = new ArrayList<String>();
 		ll1.add("A");

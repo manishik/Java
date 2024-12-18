@@ -12,14 +12,14 @@ public class LinkedHashMapExample {
 
 		linkedHashMap.put(7, "Seven");
 		linkedHashMap.put(new Integer(3), "Three");
-		linkedHashMap.put(new Integer(2), "Two");
+		linkedHashMap.put(new Integer(2), "To");
 		linkedHashMap.put(new Integer(2), "Two");
 		linkedHashMap.put(6, "Six");
-		linkedHashMap.put(null, "Manish");
+		linkedHashMap.put(null, "null");
 		linkedHashMap.put(new Integer(4), "Four");
 		linkedHashMap.put(new Integer(1), "One");
 		linkedHashMap.put(new Integer(5), "Five");
-		linkedHashMap.put(null, "null");
+		linkedHashMap.put(null, "Manish");
 		
 		//maintains insertion order, can't have duplicate keys, allows only one null key
 		System.out.println("LinkedHashMap = "+linkedHashMap); 

@@ -6,7 +6,7 @@ public class ReverseChar {
 
 		String str = "MyString has spaces and 123 numbers";
 		System.out.println("String = " + str);
-		char charArray[] = new char[str.length()];
+		char[] charArray = new char[str.length()];
 		for (int i = 0; i < str.length(); i++) {
 			charArray[i] = str.charAt(i);
 		}
@@ -36,7 +36,7 @@ public class ReverseChar {
 		System.out.println();
 		String string = "This string has Spaces, Numb3r5 & c0up13 0f Speci@l (har@cter$";
 		System.out.println("String = " + string);
-		StringBuffer stringBuffer = new StringBuffer(string);
+		StringBuilder stringBuffer = new StringBuilder(string);
 		stringBuffer.reverse();
 		System.out.println("String reversed = " + stringBuffer);
 	}

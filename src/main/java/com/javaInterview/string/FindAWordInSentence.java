@@ -11,8 +11,8 @@ public class FindAWordInSentence {
 
     public static String search(String[] everyWordInSentence, String findWord) {
         for (int i = 0; i < everyWordInSentence.length; i++) {
-            if(findWord.equalsIgnoreCase(everyWordInSentence[i])){
-                return everyWordInSentence[i+1];
+            if (findWord.equalsIgnoreCase(everyWordInSentence[i])) {
+                return everyWordInSentence[i + 1];
             }
         }
         return "Empty (Not Found)";

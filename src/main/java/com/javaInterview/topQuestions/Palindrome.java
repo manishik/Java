@@ -13,10 +13,11 @@ public class Palindrome {
         }
 
 		String str = "ManishsinaM";
-		if (isPalindrome(str))
-			System.out.print("Palindrome");
+        System.out.println("Is this String " + str + " a Palindrome? ");
+		if (isPalindromeStr(str)) // True
+			System.out.print("Yes, " + str + " is a Palindrome");
 		else
-			System.out.print("Not Palindrome");
+            System.out.print("No, " + str + " is not a Palindrome");
 	}
 
      static boolean isPalindrome(String[] array) {
@@ -55,6 +56,19 @@ public class Palindrome {
 
         // Given string is a palindrome
         return true;
+    }
+
+    public static boolean isPalindromeStr(String str) {
+        // Normalize the string: Remove spaces and convert to lowercase
+        //String normalized = str.replaceAll("\\s", "").toLowerCase();
+        String normalized = str.replaceAll("\\s", "");
+
+        // Reverse the string and compare with the original
+        String reversed = new StringBuilder(normalized).reverse().toString();
+
+        System.out.println("true or false ?? : " + normalized.equalsIgnoreCase(reversed));
+        //return normalized.equals(reversed);
+        return normalized.equalsIgnoreCase(reversed);
     }
 
 }

@@ -1,4 +1,4 @@
-package com.javaInterview.designPatters.factory;
+package com.javaInterview.designPatters.factory.shapes;
 
 public class Rectangle implements Shape {
 

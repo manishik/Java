@@ -1,4 +1,4 @@
-package com.javaInterview.designPatters.factory;
+package com.javaInterview.designPatters.factory.shapes;
 
 public class Circle implements Shape {
     public void draw() {

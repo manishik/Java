@@ -1,14 +1,19 @@
 package com.javaInterview.dataStructure;
 
-import java.util.*;
+import java.util.PriorityQueue;
 
-public class PriorityQueueOp {
+public class PriorityQueueExample {
 	public static void main(String[] args) {
 		
 		PriorityQueue<String> pq = new PriorityQueue<String>();
 		pq.add("carrot");
-		pq.add("apple");
 		pq.add("banana");
+		pq.add("strawberry");
+		pq.add("apple");
+		pq.add("blueberry");
+		pq.add("blueberry");
+		pq.add("blackberry");
+		pq.add("carrot");
 
 		System.out.println("Priority Queue = "+pq);
 		

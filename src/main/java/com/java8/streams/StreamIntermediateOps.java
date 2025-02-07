@@ -1,6 +1,7 @@
 package com.java8.streams;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -107,7 +108,7 @@ public class StreamIntermediateOps {
 
 
         /*---------------------------------------------------------------------------------------*/
-        // flatMap
+        // flatMap - convert the above 2 levels Stream into one Stream level or a 2d array into a 1d array.
         // Creating a list of prime numbers
         List<Integer> PrimeNumbers = Arrays.asList(5, 7, 11, 13);
         // Creating a list of odd numbers
@@ -130,6 +131,11 @@ public class StreamIntermediateOps {
         List<String> phrases = Arrays.asList("sporadic perjury", "confounded skimming", "incumbent jailer", "confounded jailer");
         System.out.println("Phrases = " + phrases.stream().flatMap(phrase -> Stream.of(phrase.split("\\s+")))
                 .distinct().collect(Collectors.toList()));
+
+        Stream<List<Integer>> integerListStream = Stream.of(Arrays.asList(1, 2), Arrays.asList(3, 4), Arrays.asList(5));
+        Stream<Integer> integerStream = integerListStream.flatMap(Collection::stream);
+        System.out.println("Integer Stream = " + integerStream.collect(Collectors.toList()));
+
     }
 
 }

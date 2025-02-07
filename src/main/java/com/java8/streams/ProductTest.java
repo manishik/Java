@@ -26,14 +26,15 @@ public class ProductTest {
         productList.add(product);
         productList.add(product1);
         productList.add(product2);
+        productList.add(new Product("Product 4", 10000));
 
         // --------------------------------------------------------------------------------------------------
-        Long l1 = productList.stream().filter((x) -> x.getProductPrice() > 1000).count();
-        System.out.println("Number of Products where product price > 1000 are = " + l1);
+        Long l1 = productList.stream().filter((x) -> x.getProductPrice() > 2000).count();
+        System.out.println("Number of Products where product price > 2000 are = " + l1);
         System.out.println();
 
-        System.out.println("Products where product price > 1000 are: ");
-        List<Product> resultProductList = productList.stream().filter((x) -> x.getProductPrice() > 1000).collect(Collectors.toList());
+        System.out.println("Products where product price > 2000 are: ");
+        List<Product> resultProductList = productList.stream().filter((x) -> x.getProductPrice() > 2000).collect(Collectors.toList());
         System.out.println("ProductList = " + resultProductList);
         System.out.println();
 

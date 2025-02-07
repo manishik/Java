@@ -15,7 +15,7 @@ public class LambdaExpressionBasic {
             Lambda expressions are usually passed as parameters to a function
          */
 
-        List<Integer> numbers = Arrays.asList(3, 4, 5, 6);
+        List<Integer> integerList = Arrays.asList(3, 4, 5, 6);
 
         //1st Way
         System.out.println("1st Way");
@@ -25,7 +25,7 @@ public class LambdaExpressionBasic {
                 System.out.print(" " + integer);
             }
         };
-        numbers.forEach(consumer);
+        integerList.forEach(consumer);
         System.out.println();
         System.out.println("----------------------------");
 
@@ -34,25 +34,25 @@ public class LambdaExpressionBasic {
         Consumer<Integer> consumer1 = (Integer integer) -> {
             System.out.print(" " + integer);
         };
-        numbers.forEach(consumer1);
+        integerList.forEach(consumer1);
         System.out.println();
         System.out.println("----------------------------");
 
         //3rd Way
         System.out.println("3rd Way");
         Consumer<Integer> consumer2 = (integer) -> System.out.print(" " + integer);
-        numbers.forEach(consumer2);
+        integerList.forEach(consumer2);
         System.out.println();
         System.out.println("----------------------------");
 
         //4th Way
         System.out.println("4th Way");
-        numbers.forEach(someVariable -> System.out.print(" " + someVariable));
+        integerList.forEach(someVariable -> System.out.print(" " + someVariable));
         System.out.println();
         System.out.println("----------------------------");
 
         //5th Way
         System.out.println("5th Way");
-        numbers.forEach(System.out::println);
+        integerList.forEach(System.out::println);
     }
 }

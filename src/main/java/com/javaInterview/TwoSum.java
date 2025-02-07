@@ -2,63 +2,56 @@ package com.javaInterview;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 
 public class TwoSum {
 
     public static void main(String[] args) {
-        int[] nums = {3, 2, 4};
-
+        int[] intArray = {3, 1, 4, 5, 1, 3};
         int target = 6;
 
-        int result[] = twoSum(nums,target);
+        int[] result = findTwoSum(intArray, target);
 
-        //System.out.println(Arrays.toString(result));
-        //Arrays.asList(result).stream().forEach(s -> System.out.println(s));
-        //Stream.of(result).forEach(System.out::println);
-        Arrays.stream(result).forEach(System.out::println);
-
-
-        /*Map<Integer, Integer> map = new HashMap<>();
-
-        for (int i = 0; i < nums.length - 1; i++) {
-            map.put(nums[i], i);
+        if (result != null) {
+            System.out.printf("Indices of numbers that add up to %d are: [%d, %d]%n", target, result[0], result[1]);
+        } else {
+            System.out.println("No two numbers found that add up to the target.");
         }
 
-        for (Map.Entry<Integer, Integer> mapp : map.entrySet()) {
-            mapp.getKey();
-
-        }*/
-
-        /*for (int i = 0; i < nums.length-1; i++) {
-            System.out.println(nums[i]);
-
-            if(nums[i] + nums[i+1] == target){
-                System.out.println("Inside");
+        // Another simpler way
+        /*
+        Complexity:
+		    Time Complexity: O(n^2) due to the nested loops.
+		    Space Complexity: O(1), as no additional data structures are used.
+         */
+        for (int i = 0; i < intArray.length; i++) {
+            for (int j = i + 1; j < intArray.length; j++) {
+                if (intArray[i] + intArray[j] == target) {
+                    System.out.printf("Simpler: Indices of numbers that add up to %d are: [%d, %d]%n", target, i, j);
+                    System.out.println("Numbers that add up to = " + target + " are " + intArray[i] + " & " + intArray[j]);
+                    return;
+                }
             }
-        }*/
+        }
+        System.out.println("No two numbers found that add up to the target.");
     }
 
-    public static int[] twoSum(int[] nums, int target) {
-        // inserted Value & Indices
-        HashMap<Integer, Integer> map = new HashMap<>();
+    /*
+    Complexity:
+	    Time Complexity: O(n), as each element is processed at most twice (once during the iteration and once during the containsKey check).
+	    Space Complexity: O(n), for the HashMap.
+     */
+    private static int[] findTwoSum(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
 
-        // Filling the HashMap
-        for(int i = 0; i < nums.length; i++){
+        for (int i = 0; i < nums.length; i++) {
+            int complement = target - nums[i];
+            if (map.containsKey(complement)) {
+                return new int[]{map.get(complement), i};
+            }
             map.put(nums[i], i);
         }
-
-        // Searching for the target indices
-        for(int i = 0; i < nums.length; i++){
-            // I will get my first element Example:- [2,7,11,15], target = 9
-            int num = nums[i]; // I will get 2
-            int rem = target - num; // Calculating remaining value = 9 - 2 = 7 will get from here
-            if(map.containsKey(rem)){ // Now I will check is on any index 7 present.
-                int index = map.get(rem); // From here i will get the index for no. 7
-                if(index == i) continue; // By doing this i will handle the case to not select more then one of yourself.
-                return new int[]{i, index}; // returning the array with their indices.
-            }
-        }
-        return new int[]{}; // If we unable to found return empty array.
+        return null; // Return null if no pair is found
     }
 
 }

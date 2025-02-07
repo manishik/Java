@@ -23,7 +23,7 @@ public class Solution1 {
     
     Solution1.balances.stream().distinct();
 
-    System.out.println("Balances = " + balances);
+    //System.out.println("Balances = " + balances);
     
     return averages;
   }

@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class StreamTest {
+public class StreamImportant {
 	
 	public static void main(String[] args) {
 		
@@ -48,8 +48,7 @@ public class StreamTest {
 		
 		Stream<List<String>> strString = Stream.of(listStr);
 		System.out.println("listStr = " + strString.collect(Collectors.toList()));
-		
-		
+
 		
 	}
 

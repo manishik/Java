@@ -105,6 +105,31 @@ public class StreamIntermediateOps {
         System.out.println("Limited Number List = " + numbersList.stream().limit(5).collect(Collectors.toList()));
         System.out.println("Limited Number List after sorting = " + numbersList.stream().sorted().limit(5).collect(Collectors.toList()));
 
+
+        /*---------------------------------------------------------------------------------------*/
+        // flatMap
+        // Creating a list of prime numbers
+        List<Integer> PrimeNumbers = Arrays.asList(5, 7, 11, 13);
+        // Creating a list of odd numbers
+        List<Integer> OddNumbers = Arrays.asList(1, 3, 5);
+        // Creating a list of even numbers
+        List<Integer> EvenNumbers = Arrays.asList(2, 4, 6, 8);
+
+        // Combining the above lists into a list of lists
+        List<List<Integer>> listOfListofInts = Arrays.asList(PrimeNumbers, OddNumbers, EvenNumbers);
+
+        // Printing the structure before flattening
+        System.out.println("The Structure before flattening is : " + listOfListofInts);
+
+        // Flattening the list of lists into a single list using flatMap
+        List<Integer> listofInts = listOfListofInts.stream().flatMap(aList -> aList.stream()).collect(Collectors.toList());
+
+        // Printing the structure after flattening
+        System.out.println("The Structure after flattening is : " + listofInts);
+
+        List<String> phrases = Arrays.asList("sporadic perjury", "confounded skimming", "incumbent jailer", "confounded jailer");
+        System.out.println("Phrases = " + phrases.stream().flatMap(phrase -> Stream.of(phrase.split("\\s+")))
+                .distinct().collect(Collectors.toList()));
     }
 
 }

@@ -7,57 +7,38 @@ import java.util.Optional;
 public class Java8OTest {
     public static void main(String[] args) {
         List<Cust> custList = new ArrayList<Cust>();
+        Cust cust = new Cust();
+        cust.setAge(43);
+        cust.setFname("Manish");
+        cust.setLname("Keshav");
+
         Cust cust1 = new Cust();
-        cust1.setAge(1);
-        cust1.setFname("Manish");
-        cust1.setLname("Keshav");
+        cust1.setAge(12);
+        cust1.setFname("Sam");
+        cust1.setLname("Manish");
 
         Cust cust2 = new Cust();
-        cust2.setAge(2);
-        cust2.setFname("Sam");
+        cust2.setAge(5);
+        cust2.setFname("Aadhya");
         cust2.setLname("Manish");
 
-        Cust cust3 = new Cust();
-        cust3.setAge(3);
-        cust3.setFname("3name");
-        cust3.setLname("3lname");
-
+        custList.add(cust);
         custList.add(cust1);
         custList.add(cust2);
-        custList.add(cust3);
+        custList.add(null);
+        custList.add(new Cust(38, "Nandini", "B"));
 
-        List<Cust> custList1 = new ArrayList<Cust>();
-
-        Optional<Cust> custOptional;
+        Optional<Cust> custOptional = Optional.empty();
 
         if (custList.size() >= 1) {
-            //System.out.println(Optional.of(custList.get(0).getFname()));
-            custOptional = Optional.of(custList.get(0));
-            custList1.add(custList.get(0));
+            custOptional = Optional.ofNullable(custList.get(4)); // 3 object is null in the list
         }
 
-        for(Cust cust: custList1){
-            System.out.println(cust.getFname());
+        if(custOptional.isPresent()) {
+            Cust customer = custOptional.get(); // Get the Cust Object from custOptional
+            System.out.println("Age = " + customer.getAge());
+            System.out.println("Name = " + customer.getFname());
         }
-
-        ///////////////////////////////////////////////////////////////////////////////////
-        List<Customer> customerList = new ArrayList<Customer>();
-        Customer customer1 = new Customer();
-        customer1.setFname("Manish");
-        customer1.setLname("Keshav");
-        customer1.setAddress("Mysore");
-
-        Customer customer2 = new Customer();
-        customer2.setFname("MMMM");
-        customer2.setLname("KKKK");
-        customer2.setAddress("MyyyyyyySoooore");
-
-        customerList.add(customer1);
-        customerList.add(customer2);
-
-
-
-
     }
 }
 
@@ -66,6 +47,13 @@ class Cust {
     private String fname;
     private String lname;
 
+    public Cust() {}
+
+    public Cust(int age, String fname, String lname) {
+        this.age = age;
+        this.fname = fname;
+        this.lname = lname;
+    }
 
     public int getAge() {
         return age;
@@ -73,37 +61,6 @@ class Cust {
 
     public void setAge(int age) {
         this.age = age;
-    }
-
-    public String getFname() {
-        return fname;
-    }
-
-    public void setFname(String fname) {
-        this.fname = fname;
-    }
-
-    public String getLname() {
-        return lname;
-    }
-
-    public void setLname(String lname) {
-        this.lname = lname;
-    }
-}
-
-class Customer {
-
-    private String fname;
-    private String lname;
-    private String address;
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
     }
 
     public String getFname() {

@@ -1,4 +1,4 @@
-package com.java8;
+package com.javaInterview.optionals;
 
 import java.util.Arrays;
 import java.util.List;
@@ -51,6 +51,7 @@ public class OptionalFromChatGPT {
         Optional<String> flattened = nestedOptional.flatMap(opt -> opt);
         System.out.println(flattened.get()); // Prints: Java
 
+        // Optional with filters
         Optional<String> optional4 = Optional.of("Nandini");
         optional4.filter(str -> str.startsWith("N")).ifPresent(System.out::println);
 

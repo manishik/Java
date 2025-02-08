@@ -1,4 +1,4 @@
-package com.java8.streams;
+package com.javaInterview.streams;
 
 import java.util.Arrays;
 import java.util.Collection;

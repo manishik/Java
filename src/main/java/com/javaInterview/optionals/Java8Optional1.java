@@ -1,4 +1,4 @@
-package com.java8;
+package com.javaInterview.optionals;
 
 import java.util.Optional;
 
@@ -19,9 +19,9 @@ public class Java8Optional1 {
         optionalString.ifPresent(name -> System.out.println("Name = " + name));
 
         Optional<String> optionalNullString = null;
-        /*if(Optional.ofNullable(optionalNullString).isEmpty()){
+        if(!optionalNullString.isPresent()){
             System.out.println("Null Value");
-        }*/
+        }
 
 
         String nullString = null;

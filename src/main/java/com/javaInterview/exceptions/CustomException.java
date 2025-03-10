@@ -5,7 +5,7 @@ public class CustomException {
 	public static void main(String[] args) {
 		try {
 			CustomException customException = new CustomException();
-			customException.method(65); //Need to handle it
+			customException.method(23); //Need to handle it
 		} catch (BusinessException be) {
 			System.out.println("My Custom Business Exception throw is '" + be.getError() + "'");
 		}
@@ -24,7 +24,7 @@ public class CustomException {
 class BusinessException extends Exception {
 
 	private static final long serialVersionUID = 1L;
-	String error;
+	private String error;
 
 	public BusinessException() {
 		super();

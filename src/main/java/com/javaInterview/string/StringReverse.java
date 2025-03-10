@@ -9,6 +9,7 @@ public class StringReverse {
 		System.out.println("Reversed String = " + revStr);
 	}
 
+	// Without using any pre-defined functions
 	static String reverse(String string) {
 		System.out.println("String = " + string);
 		String reversedString = new String();
@@ -18,6 +19,7 @@ public class StringReverse {
 		return reversedString;
 	}
 
+	// Using built-in functions
 	static String reversing(String string) {
 		System.out.println("String = " + string);
 		StringBuffer stringBuffer = new StringBuffer(string);

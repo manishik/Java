@@ -9,10 +9,10 @@ import java.util.concurrent.TimeUnit;
 public class ScheduledFutureExample {
     public static void main(String[] args) {
         // Create a scheduled executor service with a single thread
-        ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+        ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(1);
 
         // Schedule a task to run after 3 seconds
-        ScheduledFuture<?> scheduledFuture = scheduler.schedule(() -> {
+        ScheduledFuture<?> scheduledFuture = scheduledExecutorService.schedule(() -> {
             System.out.println("Task executed after 5 seconds");
         }, 5, TimeUnit.SECONDS);
 
@@ -24,7 +24,7 @@ public class ScheduledFutureExample {
         }
 
         // Shutdown the scheduler
-        scheduler.shutdown();
+        scheduledExecutorService.shutdown();
     }
 }
 

@@ -10,13 +10,13 @@ public class Writer1 {
 			File myDir = new File("mydir");
 			myDir.mkdir();
 			
-			File file = new File("fileWrite1.txt");
-			System.out.println(file.exists()); // look for a real file
+			File file = new File("ManishFileWriter.txt");
+			System.out.println("Does this file exist? " + file.exists()); // look for a real file
 			newFile = file.createNewFile(); // maybe create a file!
-			FileWriter fw = new FileWriter(file); 
-			fw.write("howdy\nfolks\n"); // write characters to the file
-			fw.flush(); // flush before closing
-			fw.close(); // close file when done
+			FileWriter fileWriter = new FileWriter(file);
+			fileWriter.write("Howdy\nManish\nHow is it going?"); // write characters to the file
+			fileWriter.flush(); // flush before closing
+			fileWriter.close(); // close file when done
 		} catch (IOException e) {
 		}
 	}

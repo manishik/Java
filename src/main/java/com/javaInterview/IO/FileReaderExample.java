@@ -12,11 +12,14 @@ public class FileReaderExample {
         System.out.println("File Path on MacOS = " + System.getProperty("user.dir"));
         System.out.println();
         System.out.println("Java 7 way of reading a File");
+        StringBuilder allLine = new StringBuilder();
         String sCurrentLine;
-        try (BufferedReader br = new BufferedReader(new FileReader("/Users/manishkeshav/_Work/Java/Manish.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("/Users/manishkeshav/_Work 2025/Java/Manish.txt"))) {
             while ((sCurrentLine = br.readLine()) != null) {
-                System.out.println(sCurrentLine);
+                //System.out.println(sCurrentLine);
+                allLine.append(sCurrentLine);
             }
+            System.out.println("File Contents are: " + allLine);
         } catch (FileNotFoundException e) {
             // e.printStackTrace();
             System.out.println("Inside File Not Found Exception..");
@@ -32,7 +35,7 @@ public class FileReaderExample {
         System.out.println("Java 6 way of reading a File");
         BufferedReader br = null;
         try {
-            br = new BufferedReader(new FileReader("/Users/manishkeshav/_Work/Java/Manish.txt"));
+            br = new BufferedReader(new FileReader("/Users/manishkeshav/_Work 2025/Java/Manish.txt"));
             while ((sCurrentLine = br.readLine()) != null) {
                 System.out.println(sCurrentLine);
             }

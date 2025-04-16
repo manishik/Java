@@ -22,7 +22,7 @@ public class BubbleSort {
                 }
             }
         }
-        System.out.println("Sorted integer array = ");
+        System.out.print("Sorted integer array = ");
         for (int i : intArray) {
             System.out.print(" " + i);
         }

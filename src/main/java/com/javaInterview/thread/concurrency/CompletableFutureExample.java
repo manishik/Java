@@ -1,4 +1,4 @@
-package com.javaInterview.concurrency;
+package com.javaInterview.thread.concurrency;
 
 import java.util.concurrent.CompletableFuture;
 

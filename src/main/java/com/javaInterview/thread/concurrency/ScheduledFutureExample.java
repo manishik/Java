@@ -1,4 +1,4 @@
-package com.javaInterview.concurrency;
+package com.javaInterview.thread.concurrency;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
@@ -11,13 +11,14 @@ public class ScheduledFutureExample {
         // Create a scheduled executor service with a single thread
         ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(1);
 
-        // Schedule a task to run after 3 seconds
+        // Schedule a task to run after 5 seconds
         ScheduledFuture<?> scheduledFuture = scheduledExecutorService.schedule(() -> {
             System.out.println("Task executed after 5 seconds");
         }, 5, TimeUnit.SECONDS);
 
         try {
             // Wait until the scheduled task completes
+            System.out.println("Here in try first... ");
             scheduledFuture.get();
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();

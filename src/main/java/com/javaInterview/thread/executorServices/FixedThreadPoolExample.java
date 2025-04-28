@@ -1,4 +1,4 @@
-package com.javaInterview.executorServices;
+package com.javaInterview.thread.executorServices;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

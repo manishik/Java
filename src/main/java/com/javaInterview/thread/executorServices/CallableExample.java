@@ -1,4 +1,4 @@
-package com.javaInterview.executorServices;
+package com.javaInterview.thread.executorServices;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;

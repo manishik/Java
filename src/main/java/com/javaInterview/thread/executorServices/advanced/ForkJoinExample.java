@@ -1,4 +1,4 @@
-package com.javaInterview.executorServices.advanced;
+package com.javaInterview.thread.executorServices.advanced;
 
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;

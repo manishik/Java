@@ -1,18 +1,14 @@
 package com.javaInterview.sort_search.comparator;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class ComparatorSort {
 
 	// using List
-	List familyList = new ArrayList<Family>();
+	List personArrayList = new ArrayList<Person>();
 
 	// using Arrays
-	Family[] family = new Family[3];
+	Person[] person = new Person[3];
 
 	public static void main(String[] args) {
 		new ComparatorSort().go();
@@ -21,50 +17,50 @@ public class ComparatorSort {
 	public void go() {
 
 		/*
-		 * familyList.add(new Family("Nandini", 26)); familyList.add(new
-		 * Family("Samarth", 1)); familyList.add(new Family("Manish", 32));
+		 * personArrayList.add(new Person("Nandini", 26)); personArrayList.add(new
+		 * Person("Samarth", 1)); personArrayList.add(new Person("Manish", 32));
 		 */
 
 		// Date modified 28th March 2016
-		// sorting family but family need not implement Comparator
-		familyList.add(new Family("Nandini", 29));
-		familyList.add(new Family("Samarth", 3));
-		familyList.add(new Family("Manish", 35));
+		// sorting person but person need not implement Comparator
+		personArrayList.add(new Person("Nandini", 29));
+		personArrayList.add(new Person("Samarth", 3));
+		personArrayList.add(new Person("Manish", 35));
 
-		family[0] = new Family("Nandini", 29);
-		family[1] = new Family("Samarth", 3);
-		family[2] = new Family("Manish", 35);
+		person[0] = new Person("Nandini", 29);
+		person[1] = new Person("Samarth", 3);
+		person[2] = new Person("Manish", 35);
 
-		System.out.println("Family Name List = " + familyList);
+		System.out.println("Person Name List = " + personArrayList);
 		// Collections sorting
 		// Using a different classes
-		 Collections.sort(familyList, new NameSort());
-		// Collections.sort(familyList, new AgeSort());
+		 Collections.sort(personArrayList, new NameSort());
+		// Collections.sort(personArrayList, new AgeSort());
 
-		//Collections.sort(familyList);
+		//Collections.sort(personArrayList);
 
-		// Sort by FamilyName directly 
-		/*Collections.sort(familyList, new Comparator<Family>() {
-			public int compare(Family family, Family family2) {
-				return family.getName().compareTo(family2.getName());
+		// Sort by PersonName directly
+		/*Collections.sort(personArrayList, new Comparator<Person>() {
+			public int compare(Person person, Person person2) {
+				return person.getName().compareTo(person2.getName());
 			}
 		});*/
 
-		System.out.println("Sorted Family's List = " + familyList);
+		System.out.println("Sorted Person's List by Name = " + personArrayList);
 
 		// Display array 
-		System.out.println("Family Names = ");
-		for (int i = 0; i < family.length; i++) {
-			System.out.println(family[i].getName() + " " + family[i].getAge());
+		System.out.println("Person Names = ");
+		for (int i = 0; i < person.length; i++) {
+			System.out.println(person[i].getName() + " " + person[i].getAge());
 		}
 
 		// Arrays sorting
-		// Arrays.sort(family, new NameSort());
-		Arrays.sort(family, new AgeSort());
+		// Arrays.sort(person, new NameSort());
+		Arrays.sort(person, new AgeSort());
 
-		System.out.println("Family after sorting = ");
-		for (int i = 0; i < family.length; i++) {
-			System.out.println(family[i].getName() + " " + family[i].getAge());
+		System.out.println("Person after sorting by Age = ");
+		for (int i = 0; i < person.length; i++) {
+			System.out.println(person[i].getName() + " " + person[i].getAge());
 		}
 
 	}

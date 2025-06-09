@@ -14,7 +14,7 @@ public class FileReaderExample {
         System.out.println("Java 7 way of reading a File");
         StringBuilder allLine = new StringBuilder();
         String sCurrentLine;
-        try (BufferedReader br = new BufferedReader(new FileReader("/Users/manishkeshav/_Work 2025/Java/Manish.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("/Users/manishkeshav/_Work2025/Java/Manish.txt"))) {
             while ((sCurrentLine = br.readLine()) != null) {
                 //System.out.println(sCurrentLine);
                 allLine.append(sCurrentLine);
@@ -35,7 +35,7 @@ public class FileReaderExample {
         System.out.println("Java 6 way of reading a File");
         BufferedReader br = null;
         try {
-            br = new BufferedReader(new FileReader("/Users/manishkeshav/_Work 2025/Java/Manish.txt"));
+            br = new BufferedReader(new FileReader("/Users/manishkeshav/_Work2025/Java/Manish.txt"));
             while ((sCurrentLine = br.readLine()) != null) {
                 System.out.println(sCurrentLine);
             }

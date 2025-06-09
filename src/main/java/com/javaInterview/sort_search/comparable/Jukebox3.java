@@ -22,7 +22,7 @@ public class Jukebox3 {
 		try {
 			// CHANGE FILE PATH BASED ON WHERE THE FILE IS LOCATED EITHER ON WINDOWS OR MAC OS
 			//File file = new File("c:\\Professional Life\\WorkSpace\\Learning WS\\Core Java\\src\\com\\javaInterview\\sort_search\\comparable\\SongList.txt");
-			File file = new File("/Users/manishkeshav/_Work/Java/src/main/java/com/javaInterview/sort_search/comparable/SongList.txt");
+			File file = new File("/Users/manishkeshav/_Work2025/Java/src/main/java/com/javaInterview/sort_search/comparable/SongList.txt");
 			BufferedReader reader = new BufferedReader(new FileReader(file));
 			String line = null;
 			while ((line= reader.readLine())!= null) {

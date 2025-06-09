@@ -10,6 +10,7 @@ public class LambdaExpressionBasic {
         /*
             REMEMBER:
             parameter -> expression
+            (parameters) -> { statements }
             (parameter1, parameter2) -> expression
             (parameter1, parameter2) -> { code block }
             Lambda expressions are usually passed as parameters to a function

@@ -1,14 +1,14 @@
 package com.javaInterview.sort_search.comparator;
 
-public class Family {
+public class Person {
 
 	protected String name;
 	protected int age;
 
-	public Family() {
+	public Person() {
 	}
 
-	public Family(String name, int age) {
+	public Person(String name, int age) {
 		this.name = name;
 		this.age = age;
 	}

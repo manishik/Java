@@ -29,6 +29,7 @@ public class FailFastExample {
                 premiumPhone.put("Sony", "Xperia Z");
             }
         } catch (ConcurrentModificationException concurrentModificationException) {
+            System.out.println("Concurrent modification exception Manish...");
             concurrentModificationException.printStackTrace();
         }
 

@@ -12,9 +12,8 @@ public class FailSafeExample {
 
         System.out.println("Initial Cell Phone List = " + premiumPhone);
 
-        Iterator iterator = premiumPhone.keySet().iterator();
-
         //Adding new object while iterating a collection
+        /*Iterator iterator = premiumPhone.keySet().iterator();
         while (iterator.hasNext()) {
             System.out.println(premiumPhone.get(iterator.next()));
             premiumPhone.put("Sony", "Xperia-Series");
@@ -25,8 +24,14 @@ public class FailSafeExample {
         while (iterator2.hasNext()) {
             System.out.print(premiumPhone.get(iterator2.next()) + "\t");
         }
-		System.out.println();
-		System.out.println("Cell Phone List = " + premiumPhone);
+		System.out.println();*/
+
+        for (String key : premiumPhone.keySet()) {
+            System.out.println(key + " : " + premiumPhone.get(key));
+            premiumPhone.put("Redmi", "Crap");
+        }
+
+        System.out.println("Cell Phone List = " + premiumPhone);
     }
 }
 

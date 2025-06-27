@@ -4,7 +4,7 @@ public class StrSplit {
 
 	public static void main(String[] args) {
 
-		String str = "Manish_Hero_Of_The_Java";
+		String str = "Manish_is_a_Great_Developer_Of_Java_Programming_Language";
 
 		String strArray[] = str.split("_");
 
@@ -12,7 +12,7 @@ public class StrSplit {
 		// System.out.println("Second Element = "+s2[1]);
 
 		for (int i = 0; i < strArray.length; i++) {
-			System.out.println(strArray[i]);
+			System.out.print(" " + strArray[i]);
 		}
 
 		System.out.println();

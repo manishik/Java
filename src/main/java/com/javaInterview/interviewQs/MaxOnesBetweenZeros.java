@@ -12,6 +12,8 @@ public class MaxOnesBetweenZeros {
 
         //System.out.println("Max One Count = " + findMaxConsecutiveOnes(digits));
         System.out.println("Max One Count = " + maxOnesBetweenZeros(digits));
+
+        System.out.println(Math.max(22, 21)); // finds the maximum between 2 numbers
     }
 
     // From Internet

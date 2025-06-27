@@ -7,7 +7,7 @@ public class HashSetExample {
 	public static void main(String[] args) {
 		HashSet<Integer> hashSet = new HashSet<Integer>();
 
-		hashSet.add(new Integer(5));
+		hashSet.add(5);
 		hashSet.add(new Integer(6));
 		hashSet.add(new Integer(7));
 		hashSet.add(new Integer(8));
@@ -37,13 +37,14 @@ public class HashSetExample {
 
 		// Remove the integer 6
 		System.out.println("\nRemove integer 6");
-		hashSet.remove(new Integer(6));
+		hashSet.remove(6);
 
 		System.out.println("\nHashSet After removing: ");
 		for (Integer integer : hashSet) {
 			System.out.print(" "+integer);
 		}
 
+		System.out.println();
 		System.out.println("Iterating the same Set in a different way ");
 		Iterator iter = hashSet.iterator();
 		while (iter.hasNext()) {

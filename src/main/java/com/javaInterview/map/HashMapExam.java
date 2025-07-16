@@ -23,9 +23,11 @@ public class HashMapExam {
 		hashMap2.put("6", "Six");
 		hashMap2.put(null, null);
 		hashMap2.put("Hey", "Four");
-		hashMap2.put("Manish", null);
+		hashMap2.put("Manish", 44);
 		hashMap2.put("Hey", null);
 		hashMap2.put(null, "Idiot");
+		hashMap2.put(null, 24);
+		hashMap2.put(24, 24);
 		System.out.println("HashMap2 = " + hashMap2);
 
 		HashMap<Integer, String> hm = new HashMap<Integer, String>();

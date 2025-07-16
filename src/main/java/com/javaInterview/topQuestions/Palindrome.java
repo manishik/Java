@@ -1,32 +1,35 @@
 package com.javaInterview.topQuestions;
 
+import java.util.Arrays;
+
 public class Palindrome {
 
     public static void main(String[] args) {
-        int array[] = new int[]{1, 2, 3, 2, 1};
+        int intArray[] = new int[]{1, 2, 3, 2, 1, 4};
         String[] strArray = new String[]{"Manish", "Indudhar", "Keshav", "Indudhar", "Manish"};
         char charArray[] = new char[]{'b', 'a', 'z', 'a', 'b'};
-        if (isPalindrome(strArray)) {
-            System.out.println("Palindrome");
+        System.out.println("Is this int/String array " + Arrays.toString(intArray) + " a Palindrome?");
+        if (isPalindrome(intArray)) {
+            System.out.println("Yes a Palindrome");
         } else {
             System.out.println("Not a Palindrome");
         }
 
-		String str = "ManishsinaM";
+        String str = "ManishsinaM";
         System.out.println("Is this String " + str + " a Palindrome? ");
-		if (isPalindromeStr(str)) // True
-			System.out.print("Yes, " + str + " is a Palindrome");
-		else
+        if (isPalindromeStr(str)) // True
+            System.out.print("Yes, " + str + " is a Palindrome");
+        else
             System.out.print("No, " + str + " is not a Palindrome");
-	}
+    }
 
-     static boolean isPalindrome(String[] array) {
+    static boolean isPalindrome(int[] array) {
         boolean palindrome = false;
-        int i = array.length - 1;
-        for (int j = 0; j <= i; j++, i--) {
-            /*System.out.println("j = " + array[j]);
-            System.out.println("i = " + array[i]);*/
-            if (array[j] == array[i]) {
+        //int i = array.length - 1;
+        for (int i = 0, j = array.length - 1; i <= j; i++, j--) {
+            /*System.out.println("i = " + array[i]);
+            System.out.println("j = " + array[j]);*/
+            if (array[i] == array[j]) {
                 palindrome = true;
             } else {
                 palindrome = false;

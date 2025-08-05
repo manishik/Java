@@ -1,6 +1,11 @@
 package com.scjp.chap8;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class FileBufferCopier {
 	public static void main(String[] args) throws IOException {

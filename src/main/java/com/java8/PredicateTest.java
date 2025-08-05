@@ -2,7 +2,9 @@ package com.java8;
 
 //A simple program to demonstrate the use 
 // of predicate interface 
-import java.util.*;
+
+import java.util.Arrays;
+import java.util.List;
 import java.util.function.Predicate;
 
 public class PredicateTest {

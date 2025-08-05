@@ -1,6 +1,7 @@
 package com.scjp.chap10;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Comparator;
 
 class SearchArrayTest {
 	public static void main(String[] args) {

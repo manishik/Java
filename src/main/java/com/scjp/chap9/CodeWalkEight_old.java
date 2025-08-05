@@ -1,7 +1,9 @@
 package com.scjp.chap9;
 
-import java.text.*;
-import java.util.*;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.util.Date;
+import java.util.Locale;
 
 class CodeWalkEight {
 	public static void main(String[] args) {

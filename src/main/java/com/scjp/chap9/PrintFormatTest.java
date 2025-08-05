@@ -1,6 +1,7 @@
 package com.scjp.chap9;
 
-import java.io.*;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 public class PrintFormatTest {
 	public static void main(String[] args) throws IOException {

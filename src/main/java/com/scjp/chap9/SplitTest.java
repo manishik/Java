@@ -1,6 +1,6 @@
 package com.scjp.chap9;
 
-import java.util.regex.*;
+import java.util.regex.Pattern;
 
 public class SplitTest {
 	public static void main(String[] args) {

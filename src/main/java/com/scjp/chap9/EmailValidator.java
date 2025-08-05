@@ -1,6 +1,7 @@
 package com.scjp.chap9;
 
-import java.util.regex.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class EmailValidator {
 	public static void main(String[] args) {

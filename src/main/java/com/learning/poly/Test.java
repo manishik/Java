@@ -1,7 +1,5 @@
 package com.learning.poly;
 
-import java.util.HashMap;
-
 class Pet implements IAnimal {
 
 	public void behave() {

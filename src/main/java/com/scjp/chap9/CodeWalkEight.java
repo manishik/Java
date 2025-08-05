@@ -1,7 +1,5 @@
 package com.scjp.chap9;
 
-import java.io.PrintWriter;
-
 class CodeWalkEight1 {
 	public static void main(String[] args) {
 		TheBooleanGame bg = new TheBooleanGame();

@@ -1,7 +1,7 @@
 package com.scjp.chap9;
 
-import java.util.*;
-import java.io.*;
+import java.io.IOException;
+import java.util.Formatter;
 
 public class FormatterTest {
 	public static void main(String[] args) throws IOException {

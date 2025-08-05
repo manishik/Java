@@ -1,7 +1,8 @@
 package com.scjp.chap9;
 
-import java.util.*;
-import java.text.*;
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 class DateFormatter {
 	public static void main(String[] args) {

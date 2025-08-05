@@ -1,10 +1,10 @@
 package com.learning.refection;
 
-import java.lang.reflect.Constructor;
-
 import com.learning.refection.olives.Olive;
 import com.learning.refection.olives.OliveColor;
 import com.learning.refection.olives.OliveName;
+
+import java.lang.reflect.Constructor;
 
 public class Main {
 

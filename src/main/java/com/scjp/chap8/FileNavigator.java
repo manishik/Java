@@ -1,6 +1,6 @@
 package com.scjp.chap8;
 
-import java.io.*;
+import java.io.File;
 
 class FileNavigator {
 	public static void main(String[] args) {

@@ -1,6 +1,7 @@
 package com.scjp.chap10;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class GenericTest {
 	public static void main(String[] args) {

@@ -1,6 +1,11 @@
 package com.scjp.chap8;
 
-import java.io.*;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.EOFException;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class ReadWriteDataTest {
 	public static void main(String[] args) throws IOException {

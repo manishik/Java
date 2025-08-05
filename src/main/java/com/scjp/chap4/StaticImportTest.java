@@ -1,7 +1,7 @@
 package com.scjp.chap4;
 
-import static java.lang.Math.PI;
 import static java.lang.Math.E;
+import static java.lang.Math.PI;
 
 class StaticImportTest {
 	public static void main(String[] args) {

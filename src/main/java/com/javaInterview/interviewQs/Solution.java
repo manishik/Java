@@ -1,7 +1,6 @@
 package com.javaInterview.interviewQs;
 
 import java.util.Scanner;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 //Test from Cisco on 27th May 2018 to validate an ip address

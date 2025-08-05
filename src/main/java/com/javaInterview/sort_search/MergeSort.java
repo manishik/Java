@@ -2,7 +2,6 @@ package com.javaInterview.sort_search;
 
 import java.util.Arrays;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 public class MergeSort {
     public static void mergeSort(int[] array) {

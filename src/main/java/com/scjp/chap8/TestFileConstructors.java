@@ -1,6 +1,7 @@
 package com.scjp.chap8;
 
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
 
 class TestFileConstructors {
 	public static void main(String[] args) {

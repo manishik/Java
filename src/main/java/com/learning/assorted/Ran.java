@@ -1,6 +1,8 @@
 package com.learning.assorted;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class Ran extends commingToCoffee {
 	public static void main(String[] args) {

@@ -1,7 +1,5 @@
 package com.scjp.chap10;
 
-import java.util.*;
-
 public class AutoboxingTest {
 	public static void main(String[] args) {
 		Integer wi1 = 1;

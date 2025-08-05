@@ -1,7 +1,5 @@
 package com.scjp.chap3;
 
-import java.io.*;
-
 class MyClass {
 	public void printStuff(String greet, int... values) {
 		for (int v : values) {

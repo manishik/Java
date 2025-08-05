@@ -1,6 +1,8 @@
 package com.javaInterview.IO;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Writer1 {
 

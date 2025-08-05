@@ -1,6 +1,8 @@
 package com.scjp.chap7;
 
-import java.io.*;
+import java.io.EOFException;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class OverrideException {
 	public void someMethod() throws IOException {

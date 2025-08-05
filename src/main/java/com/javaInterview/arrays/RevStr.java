@@ -1,6 +1,5 @@
 package com.javaInterview.arrays;
 
-import java.util.Arrays;
 import java.util.stream.Stream;
 
 public class RevStr {

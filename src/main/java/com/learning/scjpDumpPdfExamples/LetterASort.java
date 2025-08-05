@@ -1,7 +1,7 @@
 package com.learning.scjpDumpPdfExamples;
 
-import java.util.Collections;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class LetterASort {
 	public static void main(String[] args) {

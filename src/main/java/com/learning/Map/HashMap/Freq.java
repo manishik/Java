@@ -1,6 +1,7 @@
 package com.learning.Map.HashMap;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Freq {
 	public static void main(String[] args) {

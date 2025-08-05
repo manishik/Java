@@ -1,6 +1,5 @@
 package com.learning.Map.TreeMap;
 
-import java.util.Map;
 import java.util.TreeMap;
 
 public class Freq {

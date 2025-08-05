@@ -1,7 +1,5 @@
 package com.javaInterview.collections.sets;
 
-import java.util.Objects;
-
 public class Emp {
 
     private int id;

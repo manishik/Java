@@ -1,7 +1,6 @@
 package com.scjp.chap6;
 
 // Review Question 8. Designed to fail.
-import java.io.*;
 
 class ContinueTest {
 	public static void main(String[] arg) {

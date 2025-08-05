@@ -1,8 +1,5 @@
 package com.javaInterview;
 
-import java.util.Arrays;
-import java.util.List;
-
 public class HexaInterview {
 
     public static void main(String[] args) {

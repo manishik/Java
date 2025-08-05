@@ -1,6 +1,6 @@
 package com.scjp.chap9;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class ScannerTest {
 	public static void main(String[] args) {

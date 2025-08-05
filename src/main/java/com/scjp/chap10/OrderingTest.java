@@ -1,6 +1,8 @@
 package com.scjp.chap10;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 class OrderingTest {
 	static final Comparator<Employee> EMPLOYEE_ID = new Comparator<Employee>() {

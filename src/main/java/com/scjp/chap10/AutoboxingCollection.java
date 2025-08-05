@@ -1,6 +1,6 @@
 package com.scjp.chap10;
 
-import java.util.*;
+import java.util.HashMap;
 
 public class AutoboxingCollection {
 	public static void main(String[] args) {

@@ -2,7 +2,6 @@ package com.javaInterview.interviewQs;
 
 import java.util.ConcurrentModificationException;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 public class FailFastExample {

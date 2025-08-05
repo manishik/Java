@@ -1,6 +1,7 @@
 package com.learning.assorted;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class CharAt {
 	public static void main(String[] args) {

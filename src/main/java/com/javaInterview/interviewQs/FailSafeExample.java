@@ -1,6 +1,5 @@
 package com.javaInterview.interviewQs;
 
-import java.util.Iterator;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class FailSafeExample {

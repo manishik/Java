@@ -1,7 +1,7 @@
 package com.scjp.chap9;
 
-import java.util.*;
-import java.text.*;
+import java.text.NumberFormat;
+import java.util.Locale;
 
 class NumberFormatter {
 	public static void main(String[] args) {

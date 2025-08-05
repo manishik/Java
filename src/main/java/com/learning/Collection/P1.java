@@ -1,19 +1,8 @@
 package com.learning.Collection;
 
 import java.util.Collection;
-
-import java.util.Vector;
-import java.util.ArrayList;
-import java.util.LinkedList;
-
 import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.TreeSet;
-
-import java.util.Hashtable;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.TreeMap;
+import java.util.Vector;
 
 public class P1 {
 

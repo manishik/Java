@@ -30,11 +30,11 @@ public class HashMapExam {
 		hashMap2.put(24, 24);
 		System.out.println("HashMap2 = " + hashMap2);
 
-		HashMap<Integer, String> hm = new HashMap<Integer, String>();
-		hm.put(1, "Manish");
-		hm.put(1, "Indudhar");
-		hm.put(new Integer(1), "Keshav");
-		System.out.println("HashMap = " + hm);
+		HashMap<Integer, String> hashMap1 = new HashMap<Integer, String>();
+        hashMap1.put(1, "Manish");
+        hashMap1.put(1, "Indudhar");
+        hashMap1.put(1, "Keshav");
+		System.out.println("HashMap = " + hashMap1);
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.javaInterview.sort_search;
+package com.javaInterview.sort_search.searches;
 
 public class LinearSearch {
 

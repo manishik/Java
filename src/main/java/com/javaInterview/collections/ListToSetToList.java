@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class ListToSetToList {
 	public static void main(String[] args) {
@@ -27,8 +28,8 @@ public class ListToSetToList {
 		System.out.print(" (LinkedHashSet)");
 		
 		System.out.println();
-		//Set<String> treeSet = new TreeSet<String>(myLinkedHashSet); // Sorting
-		//System.out.println(treeSet + " (Sorted Set)");
+		Set<String> treeSet = new TreeSet<String>(myLinkedHashSet); // Sorting
+		System.out.println(treeSet + " (Sorted Set)");
 		
 		
 		List<String> anotherList = new ArrayList<String>(myLinkedHashSet); // Set to List (ArrayList) 

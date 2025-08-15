@@ -1,4 +1,4 @@
-package com.javaInterview.sort_search;
+package com.javaInterview.sort_search.sorts;
 
 import java.util.Arrays;
 import java.util.Collections;

@@ -6,27 +6,32 @@ public class BinarySearch {
 
     public static void main(String[] args) {
 
-        // Array MUST be SORTED (Ascending Order) to do a Binary Search
-        int array[] = {12, 44, 55, 91, 333, 480, 666, 770, 889, 921, 4456}; // Ascending Order
+        // Array MUST be SORTED (Ascending Order) in order to do a Binary Search
+        int sortedArray[] = {-88, -11, -6, 0, 12, 44, 55, 91, 333, 480, 666, 770, 889, 921, 4456}; // Ascending Order
         //int array[] = {889, 444, 333, 323, 222, 111, 100, 99, 33}; // Decending Order - Doesn't work
-        int keyElement = 333;
+        int keyElement = -111;
 
         //Remember to print an int array without iterating
-        System.out.println("Given Array = " + Arrays.toString(array));
+        System.out.println("Given Sorted Array = " + Arrays.toString(sortedArray));
         System.out.println("Key to be searched = " + keyElement);
 
-        int indexPos = binarySearch(array, 0, array.length - 1, keyElement);
-        System.out.println("Key found at Index = " + indexPos);
+        int indexPos = binarySearch(sortedArray, 0, sortedArray.length - 1, keyElement);
+        if (indexPos == -1 || indexPos < 0) {
+            System.out.println("Key " + keyElement + " is not found in the Array ");
+        } else {
+            System.out.println("Key " + keyElement + " is found at index position " + indexPos + " of the Array " + Arrays.toString(sortedArray));
+        }
+
     }
 
     // Iterative version
-    public static int binarySearch(int[] array, int firstIndex, int lastIndex, int key) {
+    public static int binarySearch(int[] sortedArray, int firstIndex, int lastIndex, int key) {
         int middleIndex = 0;
         while (firstIndex <= lastIndex) {
             middleIndex = firstIndex + (lastIndex - firstIndex) / 2;
-            if (array[middleIndex] == key) {
+            if (sortedArray[middleIndex] == key) {
                 return middleIndex;
-            } else if (array[middleIndex] < key) {
+            } else if (sortedArray[middleIndex] < key) {
                 firstIndex = middleIndex + 1;
             } else {
                 lastIndex = middleIndex - 1;

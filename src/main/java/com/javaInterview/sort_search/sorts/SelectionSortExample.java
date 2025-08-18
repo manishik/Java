@@ -12,10 +12,11 @@ public class SelectionSortExample {
     }
 
     public static void selectionSort(int[] array) {
-        for (int i = 0; i < array.length - 1; i++) {
+        int n = array.length;
+        for (int i = 0; i < n - 1; i++) {
             int minIndex = i; // Assume the current index is the minimum
             // Find the index of the smallest element in the remaining array
-            for (int j = i + 1; j < array.length; j++) {
+            for (int j = i + 1; j < n; j++) {
                 if (array[j] < array[minIndex]) {
                     minIndex = j;
                 }
@@ -32,4 +33,8 @@ public class SelectionSortExample {
 
 /*
 
+Selection sort is a simple comparison-based sorting algorithm.
+
+Selection Sort works by repeatedly finding the minimum element from the unsorted portion and moving it to the front.
+It also has O(n²) time complexity in the worst and average case, but generally does fewer swaps than Bubble Sort.
  */

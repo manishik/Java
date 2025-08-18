@@ -9,12 +9,12 @@ public class LinearSearch {
 		int position = 0;
 
 		for (int i = 0; i < anArrayOfStrings.length; i++) {
-			if (!anArrayOfStrings[i].equalsIgnoreCase(wordToBeSearched)) {
-				found = false;
+			if (anArrayOfStrings[i].equalsIgnoreCase(wordToBeSearched)) {
+                found = true;
+                position = i;
+                break;
 			} else {
-				found = true;
-				position = i;
-				break;
+                found = false;
 			}
 		}
 		if (found == true) {

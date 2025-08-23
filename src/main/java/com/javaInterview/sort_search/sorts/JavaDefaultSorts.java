@@ -16,14 +16,14 @@ public class JavaDefaultSorts {
         Collections.sort(numbersList);
         System.out.println("Sorted Number List = " + numbersList);
 
-        Collections.sort(numbersList, Collections.reverseOrder());
+        numbersList.sort(Collections.reverseOrder());
         System.out.println("Reverse Sorted Number List = " + numbersList);
 
         List<Integer> anotherNumbersList = Arrays.asList(1, 92, -2, 0, 5, -9, 12, 10, 3, -3, 988, 4);
         System.out.println("Another Number List = " + anotherNumbersList);
 
         // (Sort elements using Streams)
-        System.out.println("Sorted Number List = " + anotherNumbersList.stream().sorted().collect(Collectors.toList()));
+        System.out.println("Sorted Number List = " + anotherNumbersList.stream().sorted().toList());
         System.out.println("Sorted Number List (Reversed) = " + anotherNumbersList.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList()));
 
     }

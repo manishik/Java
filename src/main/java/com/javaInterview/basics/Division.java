@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Division {
 
 	public static void main(String[] args) {
-		int number = 1234678907;
+		int number = 1234567890;
 		int sumTotal = 0;
 
 		System.out.println("Number = " + number);
@@ -19,27 +19,28 @@ public class Division {
 			//System.out.println("Quotient = " + number);
 		} while (number > 0);
 
-		System.out.println("arrayList = " + arrayList);
-		System.out.println("arrayList total = " + sumTotal);
+		System.out.println("ArrayList from Number = " + arrayList);
+		System.out.println("ArrayList total = " + sumTotal);
 
 		// Collections.reverse(arrayList); //Same reversing below
 
-		ArrayList<Integer> revList = new ArrayList<Integer>();
+		ArrayList<Integer> reverseArrayList = new ArrayList<Integer>();
 		for (int i = arrayList.size() - 1; i >= 0; i--) {
-			revList.add(arrayList.get(i));
+            reverseArrayList.add(arrayList.get(i));
 		}
 
-		System.out.println("Reverse arrayList = " + revList);
+		System.out.println("Reverse ArrayList = " + reverseArrayList);
 
 		// converting ArrayList to int array
-		int[] ints = new int[revList.size()];
+		int[] intArray = new int[reverseArrayList.size()];
 		int i = 0;
-		for (Integer in : revList) {
-			ints[i++] = in;
+		for (Integer in : reverseArrayList) {
+            intArray[i++] = in;
 		}
 
-		for (Integer j : ints) {
-			System.out.println("Nums = " + j);
+        System.out.print("int Array = ");
+		for (int a : intArray) {
+			System.out.print(a + " ");
 		}
 
 	}

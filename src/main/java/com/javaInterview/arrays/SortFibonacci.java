@@ -4,14 +4,14 @@ import java.util.Arrays;
 
 public class SortFibonacci {
 
-    //Sort integer array fibonacci sequence by even numbers first without using another data structure
+    //Find & Sort integer array fibonacci sequence by even numbers first without using another data structure
 
     public static void main(String[] args) {
 
         int[] fibArray = new int[]{0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418};
 
         //Remember to print an int array without iterating
-        System.out.println(Arrays.toString(fibArray));
+        System.out.println("Fibonacci Array = " + Arrays.toString(fibArray));
 
         int pos = 0, temp;
         for (int i = 0; i < fibArray.length; i++) {

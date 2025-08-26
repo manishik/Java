@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class BubbleSort {
 
     public static void main(String[] args) {
-        int[] numbers = {64, 35, 12, 0, 22, 11, 3, -55, -99};
+        int[] numbers = {64, 35, 12, 0, 22, 11, 3};
         System.out.println("Unsorted integer array = " + Arrays.toString(numbers));
         bubbleSort(numbers);
         System.out.println("Sorted array: " + Arrays.toString(numbers));
@@ -24,10 +24,17 @@ public class BubbleSort {
                     swapped = true;
                 }
             }
-            if (!swapped) break;
+            if (swapped == false) break; //  OR  if(!swapped) break;  <--- Both are same
         }
     }
 
 }
-//Bubble Sort repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.
-//It has O(n²) time complexity in the worst and average case.
+
+/*
+Bubble Sort
+Idea:
+ - Repeatedly compare adjacent elements.
+ - If they’re in the wrong order, swap them.
+ - After each full pass, the largest element “bubbles up” to the end of the list.
+
+It has O(n²) time complexity in the worst and average case.*/

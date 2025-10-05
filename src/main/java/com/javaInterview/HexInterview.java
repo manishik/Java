@@ -1,6 +1,6 @@
 package com.javaInterview;
 
-public class HexaInterview {
+public class HexInterview {
 
     public static void main(String[] args) {
 

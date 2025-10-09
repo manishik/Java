@@ -29,7 +29,7 @@ public class ProductTest {
         productList.add(new Product("Product 4", 10000));
 
         // --------------------------------------------------------------------------------------------------
-        Long l1 = productList.stream().filter((x) -> x.getProductPrice() > 2000).count();
+        Long l1 = productList.stream().filter(x -> x.getProductPrice() > 2000).count();
         System.out.println("Number of Products where product price > 2000 are = " + l1);
         System.out.println();
 

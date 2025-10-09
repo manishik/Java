@@ -108,6 +108,11 @@ public class HashMapIter {
 		newHashMap.put(2, "Banana");
 		newHashMap.put(3, "Cherry");
 
+        Map<Integer, String> keysValues = newHashMap.entrySet().stream()
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+
+        System.out.println("Keys Values = " + keysValues);
+
 		// Filter and Collect Entries
 		Map<Integer, String> filteredMap = newHashMap.entrySet().stream()
 				.filter(entry -> entry.getKey() % 2 != 0) // Filter odd keys

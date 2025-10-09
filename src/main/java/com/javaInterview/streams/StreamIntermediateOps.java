@@ -28,7 +28,7 @@ public class StreamIntermediateOps {
         List<Integer> numbersList = Arrays.asList(1, 1, 92, -2, -2, 46, 5, 5, 0, 7, 4, 4, -44, 55, 55, 8, -5, -77, -9, 10, 10, 12, 12);
         System.out.println("Number List = " + numbersList);
 
-        List<String> words = Arrays.asList("Apple", "banana", "cherry");
+        List<String> words = Arrays.asList("Apple", "banana", "cherry", "Apple");
 
 
         // filter (Filters elements based on a CONDITION)
@@ -64,6 +64,8 @@ public class StreamIntermediateOps {
         List<String> greetings = words.stream().map(name -> "Hello, " + name + "!").collect(Collectors.toList());
         System.out.println("Greetings = " + greetings);
 
+        System.out.println("Counting the number of occurances: ");
+        words.stream().collect(Collectors.groupingBy(x -> x, Collectors.counting())).forEach((k, v) -> System.out.println(k + ": " + v));
 
         List<char[]> charArrays = words.stream().map(String::toCharArray).collect(Collectors.toList());
         for (char[] arr : charArrays) {

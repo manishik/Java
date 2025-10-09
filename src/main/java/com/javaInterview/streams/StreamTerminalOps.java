@@ -83,8 +83,8 @@ public class StreamTerminalOps {
         //Optional<Integer> max = numbers.stream().reduce(Integer::max); // Using method reference
         max.ifPresent(value -> System.out.println("Max: " + value));
         //sum - can use any 3 ways below
-        int sum = numbers.stream().reduce(0, (a, b) -> a + b); // Lambda: sum two numbers
-        //int sum = numbers.stream().reduce(0, Integer::sum); // Using method reference
+        //int sum = numbers.stream().reduce(0, (a, b) -> a + b); // Lambda: sum two numbers
+        int sum = numbers.stream().reduce(0, Integer::sum); // Using method reference
         System.out.println("Sum: " + sum);
 
         int multiply = numbers.stream().reduce(1, (a, b) -> a * b); // Multiply elements

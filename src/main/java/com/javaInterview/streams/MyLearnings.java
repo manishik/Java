@@ -11,11 +11,11 @@ public class MyLearnings {
 
     public static void main(String[] args) {
 
-        String str = "Manishhh";
+        String str = "Manish K I";
         Stream<String> streamStr = Stream.of(str);
-        List<String> aList = streamStr.map(String::toUpperCase).collect(Collectors.toList());
+        List<String> aList = streamStr.map(String::toUpperCase).toList();
         String strArray[] = aList.toArray(new String[0]);
-        System.out.println("aList = " + aList);
+        System.out.println("List = " + aList);
         System.out.println("strArray = " + Arrays.toString(strArray));
 
         String string = "SomeeeStringg";
@@ -26,6 +26,6 @@ public class MyLearnings {
         for (char c : charArray) {
             aSet.add(c);
         }
-        System.out.println("aSet = " + aSet);
+        System.out.println("Set = " + aSet);
     }
 }

@@ -10,17 +10,17 @@ import java.util.stream.Stream;
 public class Practice1 {
 
     public static void main(String[] args) {
-        List<String> words = Arrays.asList("Apple", "Banana", "Apple", "Orange", "banana", "APPLE", "apple");
+        List<String> words = Arrays.asList("Apple", "Banana", "Apple", "Orange", "banana", "APPLE", "apple", "Orange");
 
-        // Oct 5th Interview with Mphasis
+        // 5th Oct 2025 Interview with Mphasis
         // Given a list of strings, count how many times each word appears (case-insensitive) using Java 8 streams.
         Map<String, Long> wordCount = words.stream()
                 //.map(String::toLowerCase) //Skipping this step will make (case-sensitive)
                 .collect(Collectors.groupingBy(word -> word, Collectors.counting()));
 
-        System.out.println(wordCount);
+        System.out.println("WordCount = " + wordCount);
 
         Stream<String> list = words.stream().distinct();
-        System.out.println(list.collect(Collectors.toList()));
+        System.out.println("Disticnt Words = " + list.toList());
     }
 }

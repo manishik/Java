@@ -63,6 +63,7 @@ VALUES ('5','Security');
 INSERT INTO Department(DeptID, DeptName)
 VALUES ('9','Info Security');
 --—————————————————————————————————————————
+commit;
 
 select * FROM Employee;
 select * FROM Department;

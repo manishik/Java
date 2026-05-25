@@ -26,22 +26,22 @@ CREATE TABLE Department
 --—————————————————————————————————————————
 
 INSERT INTO Employee(empID, LastName, FirstName, Address, City, DeptID, Salary)
-VALUES ('1','Keshav','Manish','RockCove Ter','Ashburn','1', '10000');
+VALUES ('1','Keshav','Manish','RockCove Ter','Ashburn','1', '280000.00');
 
 INSERT INTO Employee(empID, LastName, FirstName, Address, City, DeptID, Salary)
-VALUES ('2','Sal','Sandesh','Indiranagar','BLR','2', '20000.00');
+VALUES ('2','Kumar','Pradeep','Indiranagar','BLR','2', '20000.00');
 
 INSERT INTO Employee(empID, LastName, FirstName, Address, City, DeptID, Salary)
 VALUES ('3','Raj','Ritu','Noida','Delhi','1', '30000.90');
 
 INSERT INTO Employee(empID, LastName, FirstName, Address, City, DeptID, Salary)
-VALUES ('4','David','Jashua','Ter','Den','9', '5000.45');
+VALUES ('4','Rao','Kiran','Ter','Den','9', '5000.45');
 
 INSERT INTO Employee(empID, LastName, FirstName, Address, City, DeptID, Salary)
-VALUES ('5','Sri','Shreyas','Somewhere in Boston','Boston','9', '300.33');
+VALUES ('5','Prasad','Krishna','Somewhere in Boston','Boston','9', '300.33');
 
 INSERT INTO Employee(empID, LastName, FirstName, Address, City, DeptID, Salary)
-VALUES ('6','Sri','Shreyas','Somewhere in Boston','Boston','9', '300.33');
+VALUES ('6','Srinath','Shreyas','Somewhere in Boston','Boston','9', '300.33');
 
 --—————————————————————————————————————————
 
@@ -80,14 +80,14 @@ WHERE e.DEPTID = d.DEPTID;
 
 --OR
 
-SELECT empID, Firstname
+SELECT empID, Firstname, LastName
 FROM Employee
 INNER JOIN Department
 ON Employee.Deptid = Department.DeptId;
 
 --OR
 
-SELECT empID, Firstname
+SELECT empID, Firstname, LastName
 FROM Employee e
 INNER JOIN Department d
 ON e.Deptid = d.DeptId;
@@ -101,6 +101,7 @@ LEFT JOIN Department
 ON Employee.DeptID=Department.DeptID
 ORDER BY Employee.EmpID;
 
+-- Gets all rows from Employee Table
 --—————————————————————————————————————————
 
 --RIGHT OUTER JOIN
@@ -111,6 +112,7 @@ RIGHT JOIN Department
 ON Employee.DeptID=Department.DeptID
 ORDER BY Employee.EmpID;
 
+-- Gets all rows from Department Table
 --—————————————————————————————————————————
 
 --FULL JOIN

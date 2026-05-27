@@ -13,13 +13,14 @@ public class PredicateTest {
 
 		// create a list of strings
 		List<String> listOfString = Arrays.asList("Keshav", "Geek", "GEico", "g1", "GeeksQuiz", "QA", "Manish");
+        System.out.println("List of String = " + listOfString);
 
 		// declare the predicate type as string and use
 		// lambda expression to create object
 		Predicate<String> strWhichStartsWithGe = (string) -> string.startsWith("Ge");
 
 		// Iterate through the list
-		System.out.println("List of items matching Predicate : ");
+		System.out.println("List of strings which starts with 'Ge' (matching Predicate) : ");
 		for (String string : listOfString) {
 			// call the test method
 			if (strWhichStartsWithGe.test(string))
@@ -29,11 +30,11 @@ public class PredicateTest {
 		System.out.println();
 		
 		// Creating predicate 
-        Predicate<Integer> lesserthan = i -> (i < 18);  
+        Predicate<Integer> lesserthan18 = i -> (i < 18);
   
         // Calling Predicate method 
-        System.out.println("lesserthan = " + lesserthan.test(10));  
-        System.out.println("lesserthan = " + lesserthan.test(18));  
+        System.out.println("Is 10 lesserthan18 = " + lesserthan18.test(10));
+        System.out.println("Is 18 lesserthan18 = " + lesserthan18.test(18));
         
         System.out.println();
         
@@ -55,9 +56,9 @@ public class PredicateTest {
 	static void pred(int inputNumber, Predicate<Integer> predicate) 
     { 
         if (predicate.test(inputNumber)) { 
-            System.out.println("Number >7 is  " + inputNumber); 
+            System.out.println(inputNumber +" is > 7");
         } else {
-        	 System.out.println("Number <7 is " + inputNumber); 
+        	 System.out.println(inputNumber +" is < 7");
         }
     } 
 	

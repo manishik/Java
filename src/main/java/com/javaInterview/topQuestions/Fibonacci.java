@@ -11,8 +11,10 @@ public class Fibonacci {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Enter a number\n");
 		number = Long.parseLong(br.readLine());
-		 fibo(number); // using recursion
+		// fibo(number); // using recursion
 		// fibonacci(number); // using iterative
+
+		fiboo(0, 1, number);
 	}
 
 	static long i1 = 0;
@@ -31,7 +33,7 @@ public class Fibonacci {
 		}
 	}
 
-	// using recursion
+	// using recursion - WAY 1
 	static long fibo(long number) {
 		if (number >= i3) {
 			System.out.print(i3 + "   ");
@@ -42,6 +44,14 @@ public class Fibonacci {
 		} else {
 			return (1);
 		}
+	}
+
+	// using recursion - WAY 2
+	static void fiboo(int i1, int i2, long limit){
+		if (i1 > limit) return;
+		System.out.println(i1);
+		int sum = i1 + i2;
+		fiboo(i2, sum, limit);
 	}
 
 }

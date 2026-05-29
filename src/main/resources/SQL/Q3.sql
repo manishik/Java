@@ -20,6 +20,8 @@ INSERT INTO attendance VALUES(2,65);
 INSERT INTO attendance VALUES(3,80);
 INSERT INTO attendance VALUES(4,80);
 
+COMMIT;
+
 SELECT * FROM students;
 SELECT * FROM marks;
 SELECT * FROM attendance;
@@ -31,4 +33,14 @@ INNER JOIN marks m
 ON s.id = m.id
 INNER JOIN attendance a
 ON m.id = a.id
+WHERE a.attendance >= 75;
+
+SELECT
+    s.id,
+    s.name,
+    m.marks,
+    a.attendance
+FROM students s
+JOIN marks m ON s.id = m.id
+JOIN attendance a ON s.id = a.id
 WHERE a.attendance >= 75;

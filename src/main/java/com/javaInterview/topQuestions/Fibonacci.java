@@ -6,52 +6,62 @@ import java.io.InputStreamReader;
 
 public class Fibonacci {
 
-	public static void main(String[] args) throws IOException {
-		long number;
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("Enter a number\n");
-		number = Long.parseLong(br.readLine());
-		// fibo(number); // using recursion
-		// fibonacci(number); // using iterative
+    static int i1 = 0, i2 = 1, i3 = 1;
 
-		fiboo(0, 1, number);
-	}
+    public static void main(String[] args) throws IOException {
+        int number;
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter a number\n");
+        number = Integer.parseInt(br.readLine());
 
-	static long i1 = 0;
-	static long	i2 = 1;
-	static long i3 = 1;
+        //fibonacci(number); // using iterative - WAY 1
+        Fibonacci(i1, i2, number); // using iterative - WAY 2
 
-	// using iterative
-	static void fibonacci(long number) {
-		System.out.println();
-		System.out.print(i1 + " " + i2 + "  ");
-		for (long i = 0; i <= number; i++) {
-			i = i1 + i2;
-			System.out.print(i + "  ");
-			i1 = i2;
-			i2 = i;
-		}
-	}
+		//Fibonacci(number); // using recursion - WAY 1
+        //fibonacci(i1, i2, number); // using recursion - WAY 2
+    }
 
-	// using recursion - WAY 1
-	static long fibo(long number) {
-		if (number >= i3) {
-			System.out.print(i3 + "   ");
-			i3 = i1 + i2;
-			i1 = i2;
-			i2 = i3;
-			return (fibo(number));
-		} else {
-			return (1);
-		}
-	}
+    // using iterative - WAY 1
+    static void fibonacci(int numberOfFibonacciElements) {
+        System.out.println();
+        System.out.print(i1 + "  " + i2 + "  ");
+        for (int i = 2; i < numberOfFibonacciElements; i++) {
+            int sum = i1 + i2;
+            System.out.print(sum + "   ");
+            i1 = i2;
+            i2 = sum;
+        }
+    }
 
-	// using recursion - WAY 2
-	static void fiboo(int i1, int i2, long limit){
-		if (i1 > limit) return;
-		System.out.println(i1);
-		int sum = i1 + i2;
-		fiboo(i2, sum, limit);
-	}
+    // using iterative - WAY 2
+    static void Fibonacci(int i1, int i2, int maxFibonacciNumber) {
+        while (i1 <= maxFibonacciNumber) {
+            System.out.print(i1 + "  ");
+            int sum = i1 + i2;
+            i1 = i2;
+            i2 = sum;
+        }
+    }
+
+    // using recursion - WAY 1
+    static int Fibonacci(int maxFibonacciNumber) {
+        if (maxFibonacciNumber >= i3) {
+            System.out.print(i3 + "   ");
+            i3 = i1 + i2;
+            i1 = i2;
+            i2 = i3;
+            return (Fibonacci(maxFibonacciNumber));
+        } else {
+            return (1);
+        }
+    }
+
+    // using recursion - WAY 2
+    static void fibonacci(int i1, int i2, int maxFibonacciNumber) {
+        if (i1 > maxFibonacciNumber) return;
+        System.out.print(i1 + "  ");
+        int sum = i1 + i2;
+        fibonacci(i2, sum, maxFibonacciNumber);
+    }
 
 }

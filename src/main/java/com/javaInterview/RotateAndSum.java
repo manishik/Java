@@ -1,8 +1,6 @@
 package com.javaInterview;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -12,15 +10,11 @@ public class RotateAndSum {
 
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getProperty("OUTPUT_FILE_PATH")));
-        bufferedWriter.write("\n");
-        bufferedWriter.close();
-        bufferedWriter = new BufferedWriter(new FileWriter(System.getProperty("OUTPUT_FILE_PATH"), true));
         int arrCount = Integer.parseInt(bufferedReader.readLine().trim());
 
         List<Integer> arr = new ArrayList<>();
 
-        String[] arrtempItems = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
+        String[] arrtempItems = bufferedReader.readLine().trim().split("\\s+");
 
         for (int i = 0; i < arrCount; i++) {
             int arrItem = Integer.parseInt(arrtempItems[i]);
@@ -28,13 +22,8 @@ public class RotateAndSum {
         }
 
         int outcome = Outcome.solve(arr);
-
-        bufferedWriter.write(outcome + "\n");
-
-        bufferedWriter.newLine();
-
+        System.out.println(outcome);
         bufferedReader.close();
-        bufferedWriter.close();
     }
 
 }
@@ -48,24 +37,26 @@ class Outcome {
      * return int.
      */
 
+    // Return the maximum value of sum(i * arr[i]) across all right rotations.
     public static int solve(List<Integer> arr){
-        //Write your code here
-        //int incrementer = 0;
-        int sum = 0;
-        int result = 0, minimum = 0, rotation = 0;
-        for(int i=0; i< arr.size();i++) {
-            if(arr.get(i) >=1 && arr.get(i)<=50) {
-                System.out.println("Arry = " +arr.get(i));
-                result = sum * arr.get(i);
-                sum = sum + 1;
-                System.out.println("result = " +result);
-                rotation = arr.get(i) + 1; //rotation
-
-            }
-
-            //incrementer = incrementer + 1;
+        if (arr == null || arr.isEmpty()) {
+            return 0;
         }
-        return result; //return type "int".
+
+        int total = 0;
+        int currentSum = 0;
+        for (int i = 0; i < arr.size(); i++) {
+            total += arr.get(i);
+            currentSum += i * arr.get(i);
+        }
+
+        int maximumSum = currentSum;
+        for (int rotation = 1; rotation < arr.size(); rotation++) {
+            int movedElement = arr.get(arr.size() - rotation);
+            currentSum = currentSum + total - arr.size() * movedElement;
+            maximumSum = Math.max(maximumSum, currentSum);
+        }
+        return maximumSum;
     }
 
 }

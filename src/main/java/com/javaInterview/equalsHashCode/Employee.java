@@ -9,14 +9,20 @@ public class Employee {
 		this.ssn = ssn;
 	}
 
+	@Override
 	public boolean equals(Object obj) {
-		Employee emp = (Employee) obj;
-		if (emp.ssn == this.ssn)
+		if (this == obj) {
 			return true;
-		return false;
+		}
+		if (!(obj instanceof Employee)) {
+			return false;
+		}
+		Employee employee = (Employee) obj;
+		return ssn == employee.ssn;
 	}
 
+	@Override
 	public int hashCode() {
-		return ssn;
+		return Integer.hashCode(ssn);
 	}
 }

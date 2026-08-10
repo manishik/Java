@@ -2,6 +2,7 @@ package com.javaInterview;
 
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
@@ -11,42 +12,31 @@ import java.util.Set;
 
 public class WordSearch {
 
-    String[] everyWord = new String[100];
-    Map<String,String> stringLinkedHashMap = new LinkedHashMap<String,String>();
-    Set<String> stringSet = new LinkedHashSet<>();
+    private final Map<String, Set<String>> nextWords = new LinkedHashMap<>();
 
     public void initialSetup(String text) {
         // Setup your data structures here
         // Do as much work here to optimize the calls on findNextWord()
-        everyWord = text.split(" ");
-        for(String word: everyWord){
-            stringLinkedHashMap.put(word, word);
-            stringSet.add(word);
+        nextWords.clear();
+        if (text == null || text.isBlank()) {
+            return;
         }
-
+        String[] everyWord = text.trim().split("\\s+");
+        for (int i = 0; i < everyWord.length - 1; i++) {
+            String word = everyWord[i].toLowerCase(Locale.ROOT);
+            nextWords.computeIfAbsent(word, ignored -> new LinkedHashSet<>()).add(everyWord[i + 1]);
+        }
     }
 
     public String findNextWord(String word) {
         // "like" -> "cats" or "dogs"
         // "i" -> "like" or "really"
         // "foo" -> null
-        String nextWord = new String();
-
-        System.out.println("stringLinkedHashMap = " + stringLinkedHashMap);
-        System.out.println("stringSet = " + stringSet);
-
-        if(stringLinkedHashMap.containsKey(word)) {
-            stringLinkedHashMap.get(word);
+        if (word == null) {
+            return null;
         }
-
-
-        for (int i = 0; i < everyWord.length; i++) {
-            if (everyWord[i].equalsIgnoreCase(word)) {
-                nextWord = everyWord[i + 1];
-                return nextWord;
-            }
-        }
-        return null;
+        Set<String> candidates = nextWords.get(word.toLowerCase(Locale.ROOT));
+        return candidates == null ? null : candidates.iterator().next();
     }
 
     public static void main(String[] args) {

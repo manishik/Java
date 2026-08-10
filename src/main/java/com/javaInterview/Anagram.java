@@ -1,40 +1,42 @@
 package com.javaInterview;
 
 import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
 
 public class Anagram {
 
 	public static void main(String[] args) {
-
 		String str1 = "Manish is a jack ass";
-		String str2 = "Manish is a ";
-		
-		//Form the hashmap for 1st str
-		
-		String emptyStr = "";
-		int length = str1.length();
-		HashMap hashMap = new HashMap<>();
-		while (length != 0) {
-			int count = 0;
-			String ch = str1.substring(0, 1);
-			for (int i = 0; i < length; i++) {
-				String t = str1.substring(i, i + 1);
-				if ((t.equalsIgnoreCase(ch))) {
-					count++;
-				} else {
-					emptyStr = emptyStr + str1.substring(i, i + 1);
-				}
-			}
-			//System.out.println("The character " + ch + " appears " + count + " time(s)");
-			hashMap.put(ch, count);
-			str1 = emptyStr;
-			length = str1.length();
-			emptyStr = "";
+		String str2 = "Jack as is as Manish";
+		System.out.println(str1);
+		System.out.println(str2);
+		System.out.println("Are the strings anagrams? == " + isAnagram(str1, str2));
+	}
+
+	public static boolean isAnagram(String first, String second) {
+		if (first == null || second == null) {
+			return false;
 		}
-		System.out.println(hashMap);
-		
-		int length2 = str2.length();
-		
+
+		String normalizedFirst = first.replaceAll("\\s", "").toLowerCase(Locale.ROOT);
+		String normalizedSecond = second.replaceAll("\\s", "").toLowerCase(Locale.ROOT);
+		if (normalizedFirst.length() != normalizedSecond.length()) {
+			return false;
+		}
+
+		Map<Character, Integer> counts = new HashMap<>();
+		for (char character : normalizedFirst.toCharArray()) {
+			counts.merge(character, 1, Integer::sum);
+		}
+		for (char character : normalizedSecond.toCharArray()) {
+			Integer count = counts.get(character);
+			if (count == null || count == 0) {
+				return false;
+			}
+			counts.put(character, count - 1);
+		}
+		return true;
 	}
 
 }

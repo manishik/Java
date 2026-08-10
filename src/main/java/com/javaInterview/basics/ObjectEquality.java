@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 import java.util.TreeMap;
 
@@ -29,33 +30,30 @@ public class ObjectEquality {
 		// emp1.method1(); emp2.method1(); emp3.method1(); emp4.method1();
 
 		//Trying to add employee with same name in any collection 
-		//Won't work for unique employees
+		// Lists allow duplicate employees.
 		List<Emp> empList = new ArrayList<Emp>();
 		empList.add(emp5);
 		empList.add(emp6);
 		System.out.println("ArrayList = " + empList);
 
-		//Won't work for unique employees
+		// The set contains one list object.
 		Set<List<Emp>> hs = new HashSet<List<Emp>>();
 		hs.add(empList);
 		System.out.println("HashSet of List = " + hs);
 
-		// Won't work for unique employees
+		// HashSet uses equals() and hashCode(), so equal employees are removed.
 		Set<Emp> hs1 = new HashSet<Emp>();
 		hs1.add(emp5);
 		hs1.add(emp6);
 		System.out.println("HashSet  = "+hs1);
 
-		// Won't work for unique employees
+		// Equal keys replace the previous value.
 		Map<Emp, String> hashMap = new HashMap<Emp, String>();
 		hashMap.put(emp5, "N");
 		hashMap.put(emp6, "N");
-		System.out.println("HashMap = " + hashMap); // Will contain duplicate
-													// employees with same name
+		System.out.println("HashMap = " + hashMap);
 
-		// Emp needs to implement Comparable so that unique employees with same
-		// names will be eliminated.
-		// TreeMap is not only used for sorting but for also unique elements
+		// TreeMap uses compareTo() to sort keys and identify equal keys.
 		Map<Emp, String> treeMap = new TreeMap<Emp, String>();
 		treeMap.put(emp5, "N");
 		treeMap.put(emp6, "N");
@@ -84,34 +82,35 @@ class Emp implements Comparable<Emp> {
 	}
 
 	
-	//is used to check if two objects with same name and id are equal or not
+	@Override
 	public boolean equals(Object object) {
-		if (object == null) {
+		if (this == object) {
+			return true;
+		}
+		if (!(object instanceof Emp)) {
 			return false;
 		}
-		if (this.getClass() != object.getClass()) {
-			return false;
-		}
-		if (this.id != ((Emp) object).id) {
-			return false;
-		}
-		if (!this.strName.equals(((Emp) object).strName)) {
-			return false;
-		}
-		return true;
+		Emp employee = (Emp) object;
+		return id == employee.id && Objects.equals(strName, employee.strName);
 	}
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(id, strName);
+	}
+
+	@Override
 	public String toString() {
 		return (id + " " + strName + " " + age);
 	}
 
-	// For sorting as-well as adding unique employee with names 
-	// In this case, removing duplicate elements (employees with same name) 
+	@Override
 	public int compareTo(Emp object) {
-		if (!this.strName.equals(((Emp) object).strName)) {
-			return -1;
+		int nameComparison = this.strName.compareTo(object.strName);
+		if (nameComparison != 0) {
+			return nameComparison;
 		}
-		return 0;
+		return Integer.compare(this.id, object.id);
 	}
 
 }

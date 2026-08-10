@@ -23,11 +23,15 @@ public class Solution1 {
   // Calculate the average daily balance per customer across all their accounts
   public Map<String, Double> AvgDailyBalance() {
     Map<String, Double> averages = new HashMap<>();
-    
-    Solution1.balances.stream().distinct();
 
-    //System.out.println("Balances = " + balances);
-    
+    for (Balance balance : balances) {
+      double accountAverage = balance.getBalances().stream()
+              .mapToInt(Integer::intValue)
+              .average()
+              .orElse(0.0);
+      averages.merge(balance.getClientId(), accountAverage, Double::sum);
+    }
+
     return averages;
   }
 
@@ -38,9 +42,13 @@ public class Solution1 {
   public Map<String, Integer> RichClientsPerCountry(Map<String, Double> averages, Map<String, String> locations) {
     Map<String, Integer> results = new HashMap<>();
 
-    
-    
-    
+    averages.forEach((clientId, average) -> {
+      String country = locations.get(clientId);
+      if (average > 75_000 && country != null) {
+        results.merge(country, 1, Integer::sum);
+      }
+    });
+
     return results;
   }
   
@@ -668,5 +676,4 @@ public class Solution1 {
   }
 
 }
-
 

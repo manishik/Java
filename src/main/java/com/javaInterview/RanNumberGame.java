@@ -14,9 +14,15 @@ public class RanNumberGame {
 
     static void startGame(int digitCount) throws InterruptedException {
         BigInteger randomNumber = generateRandomNumber(BigInteger.valueOf(digitCount));
-        System.out.println(digitCount + " Random Number generated = " + randomNumber);
-        //Thread.sleep(3000);
-        //System.out.println(System.lineSeparator().repeat(100));
+
+        System.out.print(digitCount + " Random Number generated = " + randomNumber);
+        Thread.sleep(2000);
+
+        // Clear the current line and move cursor back to start
+        System.out.print("\r");
+        System.out.print(" ".repeat(80));
+        System.out.print("\r");
+
         System.out.println("Enter the same random number generated");
         Scanner scanner = new Scanner(System.in);
         BigInteger inputNumber = scanner.nextBigInteger();

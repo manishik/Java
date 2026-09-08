@@ -1,57 +1,61 @@
 package com.javaInterview;
 
-import java.io.IOException;
-import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class RanNumberGame {
 
-    public static void main(String[] args) throws InterruptedException, IOException {
-        startGame(1);
+    public static void main(String[] args) throws InterruptedException {
+        try (Scanner scanner = new Scanner(System.in)) {
+            startGame(scanner);
+        }
     }
 
-    static void startGame(int digitCount) throws InterruptedException {
-        BigInteger randomNumber = generateRandomNumber(BigInteger.valueOf(digitCount));
+    static void startGame(Scanner scanner) throws InterruptedException {
+        int digitCount = 1;
 
-        System.out.print(digitCount + " Random Number generated = " + randomNumber);
-        Thread.sleep(2000);
+        while (true) {
+            BigInteger randomNumber = generateRandomNumber(digitCount);
+            String displayedNumber = digitCount + " digit random number : " + randomNumber;
 
-        // Clear the current line and move cursor back to start
-        System.out.print("\r");
-        System.out.print(" ".repeat(80));
-        System.out.print("\r");
+            System.out.print("Remember this " + displayedNumber);
+            System.out.flush();
+            Thread.sleep(digitCount > 5 ? 6000 : 3000);
 
-        System.out.println("Enter the same random number generated");
-        Scanner scanner = new Scanner(System.in);
-        BigInteger inputNumber = scanner.nextBigInteger();
-        System.out.println("Number entered = " + inputNumber);
-        game(inputNumber, randomNumber, digitCount);
-    }
+            // Clear the displayed number and move the cursor back to the start.
+            System.out.println("\r" + " ".repeat(displayedNumber.length()) + "\r");
+            System.out.print("Enter the same random number : ");
 
-    static void game(BigInteger inputNumber, BigInteger randomNumber, int digitCount) throws InterruptedException {
-        if (inputNumber.equals(randomNumber)) {
-            System.out.println("That's Correct");
-            digitCount++;
-            startGame(digitCount);
-        } else {
-            System.out.println("Wrong!");
-            digitCount--;
-            while (digitCount != 0) {
-                startGame(digitCount);
+            while (!scanner.hasNextBigInteger()) {
+                if (!scanner.hasNext()) {
+                    System.out.println("Game ended.");
+                    return;
+                }
+                System.out.println("Please enter a whole number:");
+                scanner.next();
+            }
+
+            BigInteger inputNumber = scanner.nextBigInteger();
+            if (inputNumber.equals(randomNumber)) {
+                System.out.println("That's Correct!");
+                digitCount++;
+            } else {
+                System.out.println("Wrong! The number was " + randomNumber + ".");
+                digitCount = Math.max(1, digitCount - 1);
             }
         }
     }
 
-    static BigInteger generateRandomNumber(BigInteger digitCount) {
-        BigInteger digits = BigInteger.valueOf(10);
-        if (digitCount.equals(0) || digitCount.equals(1)) {
-            digits = BigInteger.valueOf(10);
-        } else {
-            digits = BigDecimal.valueOf(Math.pow(digits.doubleValue(), digitCount.doubleValue())).toBigInteger();
+    static BigInteger generateRandomNumber(int digitCount) {
+        StringBuilder number = new StringBuilder(digitCount);
+        number.append(ThreadLocalRandom.current().nextInt(1, 10));
+
+        for (int i = 1; i < digitCount; i++) {
+            number.append(ThreadLocalRandom.current().nextInt(10));
         }
-        return BigInteger.valueOf(ThreadLocalRandom.current().nextLong(digits.longValue()));
+
+        return new BigInteger(number.toString());
     }
 
 }

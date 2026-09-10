@@ -14,15 +14,19 @@ public class ParallelStreamExample {
 
         int sum = IntStream.rangeClosed(1, 1000).parallel().sum();
         System.out.println("Sum: " + sum);
+        // Output: Sum: 500500
 
         List<Integer> numbersList = Arrays.asList(1, 2, 3, 4, 5);
         System.out.println("NumbersList = " + numbersList);
+        // Output: NumbersList = [1, 2, 3, 4, 5]
         int sums = numbersList.parallelStream().reduce(0, Integer::sum); // Parallel reduction
         System.out.println("Parallel Sum: " + sums);
+        // Output: Parallel Sum: 15
 
         // For large datasets, we can use parallelStream() to improve performance.
         List<Integer> doubledNumbers = numbersList.parallelStream().map(n -> n * 2).collect(Collectors.toList());
         System.out.println("DoubledNumbers = " + doubledNumbers);
+        // Output: DoubledNumbers = [2, 4, 6, 8, 10]
 
     }
 

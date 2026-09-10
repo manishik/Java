@@ -12,11 +12,13 @@ public class Test {
 		Map<String, Integer> nameMap = new HashMap<>();
 		Integer value = nameMap.computeIfAbsent("John", s -> s.length());
 		System.out.println("Value = " + value);
+		// Output: Value = 4
 
 		Integer[] myNums = {1 , 2, 3};
 		Stream<Integer> myStream = Arrays.stream(myNums);
 		long numEle = myStream.filter((i) -> i>1).count();
 		System.out.println(numEle);
+		// Output: 2
 	}
 
 }

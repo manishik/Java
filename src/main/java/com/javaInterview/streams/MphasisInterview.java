@@ -1,13 +1,12 @@
 package com.javaInterview.streams;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Practice1 {
+public class MphasisInterview {
 
     public static void main(String[] args) {
         List<String> words = Arrays.asList("Apple", "Banana", "Apple", "Orange", "banana", "APPLE", "apple", "Orange");
@@ -19,8 +18,10 @@ public class Practice1 {
                 .collect(Collectors.groupingBy(word -> word, Collectors.counting()));
 
         System.out.println("WordCount = " + wordCount);
+        // Output: WordCount = {banana=1, apple=1, Apple=2, APPLE=1, Orange=2, Banana=1}
 
         Stream<String> list = words.stream().distinct();
         System.out.println("Disticnt Words = " + list.toList());
+        // Output: Disticnt Words = [Apple, Banana, Orange, banana, APPLE, apple]
     }
 }

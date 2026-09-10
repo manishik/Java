@@ -9,5 +9,6 @@ public class ConSup {
         Supplier<Double> doubleSupplier = () -> Math.random() * 1000;
         Optional<Double> optionalDouble = Optional.empty();
         System.out.println(optionalDouble.orElseGet(doubleSupplier));
+        // Output: A random double greater than or equal to 0.0 and less than 1000.0
     }
 }

@@ -16,14 +16,17 @@ public class StreamImportant {
 		Stream streamOfCollection = collection.stream();
 		
 		System.out.println("streamOfCollection = " + streamOfCollection.collect(Collectors.toList()));
+		// Output: streamOfCollection = [a, b, c]
 		
 		//--------------------------------------------------------------------------------------------------------
 		
 		Stream<String> streamOfStrArray = Stream.of("A", "bbb", "Dash");
 		System.out.println("Stream Of String Array = " + streamOfStrArray.collect(Collectors.toList()));
+		// Output: Stream Of String Array = [A, bbb, Dash]
 		
 		Stream streamOfMixedDataTypeArray = Stream.of(1, "Manish", "34.78", 23.78);
 		System.out.println("Stream Of Mixed DataType Array = " + streamOfMixedDataTypeArray.collect(Collectors.toList()));
+		// Output: Stream Of Mixed DataType Array = [1, Manish, 34.78, 23.78]
 		
 		
 		String[] arr = new String[]{"abc", "bcd", "cde"};
@@ -34,12 +37,15 @@ public class StreamImportant {
 		
 		Stream<Integer> streamIntBuilder = Stream.<Integer>builder().add(1).add(55).add(34).build();
 		System.out.println("Stream Int Builder = " + streamIntBuilder.collect(Collectors.toList()));
+		// Output: Stream Int Builder = [1, 55, 34]
 		
 		Stream<String> streamStringBuilder = Stream.<String>builder().add("Manish").add("Indudhar").add("Keshav").build();
 		System.out.println("Stream String Builder = " + streamStringBuilder.collect(Collectors.toList()));
+		// Output: Stream String Builder = [Manish, Indudhar, Keshav]
 		
 		Stream streamBuilder = Stream.builder().add(1).add("Manish").add(34.89).build();
 		System.out.println("Stream Builder = " + streamBuilder.collect(Collectors.toList()));
+		// Output: Stream Builder = [1, Manish, 34.89]
 
 		//--------------------------------------------------------------------------------------------------------
 		
@@ -48,6 +54,7 @@ public class StreamImportant {
 		
 		Stream<List<String>> strString = Stream.of(listStr);
 		System.out.println("listStr = " + strString.collect(Collectors.toList()));
+		// Output: listStr = [[Manish, Manish, Indudhar, Nandini]]
 
 		
 	}

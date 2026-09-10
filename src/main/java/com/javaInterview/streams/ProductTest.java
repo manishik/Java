@@ -29,16 +29,22 @@ public class ProductTest {
         productList.add(new Product("Product 4", 10000));
 
         System.out.println("All Products = " + productList);
+        // Output: All Products = [Product{productName='Product 1', productPrice=1000}, Product{productName='Product 2', productPrice=2000}, Product{productName='Product 3', productPrice=3000}, Product{productName='Product 4', productPrice=10000}]
 
         // --------------------------------------------------------------------------------------------------
         Long l1 = productList.stream().filter(x -> x.getProductPrice() > 2000).count();
         System.out.println("Number of Products where product price > 2000 are = " + l1);
+        // Output: Number of Products where product price > 2000 are = 2
         System.out.println();
+        // Output: (blank line)
 
         System.out.println("Products where product price > 2000 are: ");
+        // Output: Products where product price > 2000 are:
         List<Product> resultProductList = productList.stream().filter((x) -> x.getProductPrice() > 2000).collect(Collectors.toList());
         System.out.println("ProductList = " + resultProductList);
+        // Output: ProductList = [Product{productName='Product 3', productPrice=3000}, Product{productName='Product 4', productPrice=10000}]
         System.out.println();
+        // Output: (blank line)
 
         // --------------------------------------------------------------------------------------------------
         List<Product> productList1 = Arrays.asList(new Product("A", 100),
@@ -50,8 +56,11 @@ public class ProductTest {
                 .collect(Collectors.toList());
 
         System.out.println("Products where product price < 200 are: ");
+        // Output: Products where product price < 200 are:
         aList.forEach(System.out::println);
+        // Output: Product{productName='A', productPrice=100}
         System.out.println();
+        // Output: (blank line)
         // --------------------------------------------------------------------------------------------------
 
         //Create a Stream directly rather that using a List
@@ -60,10 +69,12 @@ public class ProductTest {
                 new Product("C", 300));
 
         System.out.println("Products where product price < 300 are: ");
+        // Output: Products where product price < 300 are:
         List<Product> pList = productStream.filter(p -> p.getProductPrice() < 300).collect(Collectors.toList());
         //Can print list in below 2 ways
         //pList.forEach(System.out::println);
         System.out.println("ProductList = " + pList);
+        // Output: ProductList = [Product{productName='A', productPrice=100}, Product{productName='B', productPrice=200}]
     }
 }
 

@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 public class MphasisInterview {
 
     public static void main(String[] args) {
-        List<String> words = Arrays.asList("Apple", "Banana", "Apple", "Orange", "banana", "APPLE", "apple", "Orange");
+        List<String> words = Arrays.asList("Apple", "Banana", "Apple", "Orange", "banana", "APPLE", "apple", "Orange", "banana");
 
         // 5th Oct 2025 Interview with Mphasis
         // Given a list of strings, count how many times each word appears (case-insensitive) using Java 8 streams.
@@ -18,10 +18,10 @@ public class MphasisInterview {
                 .collect(Collectors.groupingBy(word -> word, Collectors.counting()));
 
         System.out.println("WordCount = " + wordCount);
-        // Output: WordCount = {banana=1, apple=1, Apple=2, APPLE=1, Orange=2, Banana=1}
+        // Output: WordCount = {banana=2, apple=1, Apple=2, APPLE=1, Orange=2, Banana=1}
 
         Stream<String> list = words.stream().distinct();
-        System.out.println("Disticnt Words = " + list.toList());
-        // Output: Disticnt Words = [Apple, Banana, Orange, banana, APPLE, apple]
+        System.out.println("Distinct Words = " + list.toList());
+        // Output: Distinct Words = [Apple, Banana, Orange, banana, APPLE, apple]
     }
 }
